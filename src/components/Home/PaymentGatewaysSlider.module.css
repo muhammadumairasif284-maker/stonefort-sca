@@ -1,0 +1,175 @@
+.section{
+  background: var(--sfs-black);
+  position: relative;
+  padding: 70px 0;
+  overflow: hidden;
+}
+
+.section::before{
+  content:"";
+  position:absolute;
+  inset:-12%;
+  background:
+    radial-gradient(closest-side, rgba(135,171,147,.20), transparent 65%),
+    radial-gradient(closest-side, rgba(77,110,85,.18), transparent 72%);
+  filter: blur(18px);
+  opacity: .75;
+  pointer-events:none;
+}
+
+.container{
+  width: min(1160px, calc(100% - 40px));
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.kicker{
+  margin:0 0 8px;
+  color: rgba(136,145,139,.95);
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.title{
+  margin:0 0 10px;
+  color: #fff;
+  font-size: clamp(26px, 2.4vw, 36px);
+  line-height: 1.15;
+  font-weight: 650;
+}
+
+.subtext{
+  margin:0;
+  color: rgba(136,145,139,.92);
+  max-width: 62ch;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.hint{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(16,23,17,.45);
+  color: rgba(255,255,255,.82);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.dot{
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--sfs-mint);
+  box-shadow: 0 0 0 6px rgba(135,171,147,.12);
+}
+
+.marquee{
+  position: relative;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+  overflow: hidden;
+  padding: 14px 0;
+}
+
+/* edge fades */
+.fadeLeft, .fadeRight{
+  position:absolute;
+  top:0;
+  bottom:0;
+  width: 110px;
+  z-index: 2;
+  pointer-events:none;
+}
+.fadeLeft{
+  left:0;
+  background: linear-gradient(90deg, rgba(16,23,17,1), rgba(16,23,17,0));
+}
+.fadeRight{
+  right:0;
+  background: linear-gradient(270deg, rgba(16,23,17,1), rgba(16,23,17,0));
+}
+
+/* The moving line */
+.track{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+  width: max-content;
+  padding: 0 16px;
+
+  /* Drag UX */
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: pan-x;
+
+  animation: scroll var(--duration, 38s) linear infinite;
+  will-change: transform;
+}
+
+/* Pause on hover */
+.marquee:hover .track{
+  animation-play-state: paused;
+}
+
+/* If user prefers reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .track{ animation: none; }
+}
+
+/* Each logo card */
+.item{ display:flex; }
+
+
+.logoWrap{
+  position: relative;
+  width: 260px;
+  height: 110px;
+  padding:0;
+}
+
+.logo{
+  object-fit: contain;
+  padding: 6px 10px;
+  filter: saturate(1.02) contrast(1.02);
+}
+
+.note{
+  margin: 12px 0 0;
+  color: rgba(136,145,139,.9);
+  font-size: 13px;
+}
+
+/* KEY: move half the track because we duplicated the list */
+@keyframes scroll{
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 1024px){
+  .head{ flex-direction: column; align-items:flex-start; }
+  .fadeLeft, .fadeRight{ width: 80px; }
+  .logoWrap{ width: 165px; }
+}
+
+@media (max-width: 640px){
+  .section{ padding: 56px 0; }
+  .logoWrap{ width: 150px; height: 58px; }
+}

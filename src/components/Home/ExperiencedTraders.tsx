@@ -48,7 +48,7 @@ export default function ExperiencedTraders() {
     <section ref={ref} className={styles.section} aria-label="For Experienced Traders">
       <div className={styles.container}>
         <div className={styles.head}>
-          <p className={styles.kicker}>Next Section</p>
+          
           <h2 className={styles.title}>For Experienced Traders</h2>
           <p className={styles.sub}>
             Tools and controls designed to support analysis, monitoring, and informed decision-making.

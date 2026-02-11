@@ -24,14 +24,14 @@ export default function TvMiniPills({
       "https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js";
     script.async = true;
 
-    script.innerHTML = JSON.stringify({
-      symbols: symbols.map((s) => ({ proName: s, title: s.split(":")[1] })),
-      showSymbolLogo: true,
-      isTransparent: true,
-      displayMode: "adaptive",
-      colorTheme: "light",
-      locale: "en",
-    });
+script.innerHTML = JSON.stringify({
+  symbols: symbols.map((s) => ({ proName: s, title: s.split(":")[1] })),
+  showSymbolLogo: true,
+  isTransparent: true,
+  displayMode: "adaptive",
+  colorTheme: "dark",
+  locale: "en",
+});
 
     container.appendChild(script);
   }, [id, symbols.join("|")]);

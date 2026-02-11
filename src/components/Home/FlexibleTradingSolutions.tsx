@@ -39,7 +39,7 @@ export default function FlexibleTradingSolutions() {
     <section className={styles.section} aria-label="Flexible Trading Solutions">
       <div className={styles.inner}>
         <header className={styles.header}>
-          <p className={styles.kicker}>Next Section</p>
+
           <h2 className={styles.title}>Flexible Trading Solutions</h2>
           <p className={styles.subtext}>
             Stonefort offers clients access to multiple trading platforms, including MT5 and

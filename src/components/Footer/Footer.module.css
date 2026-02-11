@@ -1,0 +1,208 @@
+/* src/components/layout/Footer/Footer.module.css */
+
+.footer{
+  background: var(--sfs-black);
+  position: relative;
+  padding: 70px 0 30px;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.footer::before{
+  content:"";
+  position:absolute;
+  inset:-20%;
+  background:
+    radial-gradient(closest-side, rgba(135,171,147,.14), transparent 65%),
+    radial-gradient(closest-side, rgba(77,110,85,.12), transparent 72%);
+  filter: blur(18px);
+  opacity: .7;
+  pointer-events:none;
+}
+
+.container{
+  width: min(1160px, calc(100% - 40px));
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Center Logo */
+.logoRow{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding-bottom: 26px;
+}
+
+.brand{
+  display:inline-flex;
+  align-items:center;
+  text-decoration:none;
+}
+
+.logo{
+  height:auto;
+  width:auto;
+  max-width: 260px;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,.35));
+}
+
+/* Row: Left Connect | Right Menu */
+.navRow{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap: 24px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+/* Left block */
+.leftCol{
+  display:flex;
+  flex-direction:column;
+  gap: 14px;
+  align-items:flex-start;
+}
+
+/* Right block */
+.rightCol{
+  display:flex;
+  flex-direction:column;
+  gap: 14px;
+  align-items:flex-end;
+  text-align:right;
+}
+
+.colTitle{
+  color: rgba(255,255,255,.88);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+
+/* Social icons */
+.socialLinks{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+}
+
+.socialBtn{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.socialBtn:hover{
+  transform: translateY(-2px);
+  border-color: rgba(135,171,147,.45);
+  background: rgba(255,255,255,.05);
+}
+
+.icon{
+  width: 18px;
+  height: 18px;
+  fill: rgba(255,255,255,.86);
+}
+
+/* ✅ Menu links in ONE HORIZONTAL LINE */
+.menu{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap: 28px;
+  flex-wrap: wrap; /* wraps nicely on smaller screens */
+}
+
+.menuLink{
+  color: rgba(255,255,255,.86);
+  text-decoration:none;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.menuLink:hover{
+  color:#fff;
+  text-decoration: underline;
+}
+
+/* Legal / Risk */
+.legalBox{
+  margin-top: 18px;
+  padding-top: 16px;
+}
+
+.legalText{
+  margin: 0 0 10px;
+  color: rgba(136,145,139,.92);
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+/* Bottom row */
+.bottomRow{
+  margin-top: 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+}
+
+.copy{
+  color: rgba(136,145,139,.9);
+  font-size: 12.5px;
+}
+
+.bottomLinks{
+  display:flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content:flex-end;
+}
+
+.bottomLink{
+  color: rgba(136,145,139,.92);
+  font-size: 12.5px;
+  text-decoration:none;
+}
+
+.bottomLink:hover{
+  color: rgba(255,255,255,.92);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .navRow{
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 18px;
+  }
+
+  .rightCol{
+    align-items:flex-start;
+    text-align:left;
+  }
+
+  .menu{
+    justify-content:flex-start;
+    gap: 18px;
+  }
+
+  .bottomRow{
+    flex-direction: column;
+    align-items:flex-start;
+  }
+}

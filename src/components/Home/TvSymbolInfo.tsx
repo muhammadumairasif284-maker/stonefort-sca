@@ -16,13 +16,13 @@ export default function TvSymbolInfo({ symbol }: { symbol: string }) {
       "https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js";
     script.async = true;
 
-    script.innerHTML = JSON.stringify({
-      symbol,
-      width: "100%",
-      locale: "en",
-      colorTheme: "light",
-      isTransparent: true,
-    });
+script.innerHTML = JSON.stringify({
+  symbol,
+  width: "100%",
+  locale: "en",
+  colorTheme: "dark",
+  isTransparent: true,
+});
 
     container.appendChild(script);
   }, [id, symbol]);

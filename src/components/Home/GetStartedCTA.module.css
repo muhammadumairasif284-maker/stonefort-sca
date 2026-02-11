@@ -1,0 +1,120 @@
+.section{
+  background: var(--sfs-black);
+  padding: 70px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before{
+  content:"";
+  position:absolute;
+  inset:-18%;
+  background:
+    radial-gradient(closest-side, rgba(135,171,147,.18), transparent 65%),
+    radial-gradient(closest-side, rgba(77,110,85,.16), transparent 72%);
+  filter: blur(18px);
+  opacity: .8;
+  pointer-events:none;
+}
+
+.container{
+  width: min(1160px, calc(100% - 40px));
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.card{
+  position: relative;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+  padding: 22px 22px;
+  overflow: hidden;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 18px;
+
+  transition: transform .18s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
+}
+
+.card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(135,171,147,.30);
+  background: rgba(255,255,255,.05);
+  box-shadow: 0 18px 55px rgba(0,0,0,.45);
+}
+
+.content{
+  max-width: 70ch;
+}
+
+.title{
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: clamp(22px, 2.2vw, 34px);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.text{
+  margin: 0;
+  color: rgba(136,145,139,.92);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.actions{
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  height: 46px;
+  padding: 0 18px;
+  border-radius: 999px;
+  text-decoration:none;
+  color: #fff;
+  font-weight: 700;
+
+  border: 1px solid rgba(135,171,147,.42);
+  background: rgba(77,110,85,.24);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  background: rgba(77,110,85,.32);
+  border-color: rgba(135,171,147,.58);
+}
+
+.arrow{
+  opacity: .9;
+}
+
+.glow{
+  position:absolute;
+  left: 35%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 520px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(135,171,147,.22), transparent 65%);
+  filter: blur(10px);
+  opacity: .85;
+  pointer-events:none;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .card{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
