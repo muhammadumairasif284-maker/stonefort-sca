@@ -10,7 +10,7 @@ const nav = [
   { href: "/market", label: "Market" },
   { href: "/accounts", label: "Accounts" },
   { href: "/platform", label: "Platform" },
-  { href: "/about", label: "About" },
+  { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact Us" },
 ];
 
@@ -64,7 +64,7 @@ export default function Header() {
                 className={styles.logo}
               />
             </Link>
-            <span className={styles.scaTag}>SCA Regulated</span>
+            
           </div>
 
           {/* Tablet/Mobile: Menu toggle button */}

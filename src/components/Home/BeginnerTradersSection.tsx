@@ -10,30 +10,30 @@ type Card = {
 
 const cards: Card[] = [
   {
-    title: "User-friendly demo",
-    desc: "Practice trading and familiarise yourself with the platform in a risk-free environment.",
+    title: "User-Friendly Demo",
+    desc: "Practice trading and get familiar with the platform in a risk-free environment.",
     icon: { src: "/images/spreadmeta.webp", alt: "Demo trading icon" },
     cta: { label: "Try Demo", href: "/demo" },
   },
   {
-    title: "Educational resources",
-    desc: "Access courses, webinars, quizzes, and videos to understand key trading concepts.",
+    title: "Educational Resources",
+    desc: "Access courses, webinars, quizzes, and videos to master essential trading concepts.",
     icon: { src: "/images/leveragemeta.webp", alt: "Education and resources icon" },
     cta: { label: "Learn More", href: "/education" },
   },
   {
-    title: "24/7 support",
-    desc: "Receive assistance through approved channels from our support team at any time.",
+    title: "24/7 Support",
+    desc: "Get assistance anytime via our approved support channels.",
     icon: { src: "/images/supportmeta.webp", alt: "Customer support icon" },
   },
   {
-    title: "Flexible position sizing",
-    desc: "Manage your exposure with flexible trade sizes in line with your risk comfort.",
+    title: "Flexible Position Sizing",
+    desc: "Adjust trade sizes to manage exposure according to your risk comfort.",
     icon: { src: "/images/leveragemeta.webp", alt: "Position sizing icon" },
   },
   {
-    title: "Risk-management tools",
-    desc: "Apply tools such as stop-loss orders to help manage potential losses.",
+    title: "Risk-Management Tools",
+    desc: "Use tools like stop-loss orders to help control potential losses",
     icon: { src: "/images/regulatedmeta.webp", alt: "Risk management icon" },
   },
 ];
@@ -45,7 +45,7 @@ export default function BeginnerTradersSection() {
         <header className={styles.header}>
           <p className={styles.kicker}>For Beginner Traders</p>
           <h2 className={styles.title}>
-            Start your trading journey with <span className={styles.brand}>stonefortsecurities.com</span>
+            Start your trading journey with <span className={styles.brand}>stonefort securities</span>
           </h2>
           <p className={styles.subtext}>
             Explore tools and learning materials designed to help you build confidence before trading live.
@@ -85,7 +85,7 @@ export default function BeginnerTradersSection() {
 
         <div className={styles.bottomCta}>
           <a className={styles.primaryBtn} href="/open-account">
-            Open an account
+            Open an Account
           </a>
         </div>
       </div>

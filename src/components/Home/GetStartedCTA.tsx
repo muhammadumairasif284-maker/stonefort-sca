@@ -8,7 +8,7 @@ export default function GetStartedCTA() {
           <div className={styles.content}>
             <h2 className={styles.title}>Get Started</h2>
             <p className={styles.text}>
-              Create your account and access the global markets in under 3 minutes.
+              Create your account and access global markets in under 3 minutes.
             </p>
           </div>
 

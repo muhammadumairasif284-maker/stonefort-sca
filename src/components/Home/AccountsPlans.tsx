@@ -54,8 +54,7 @@ export default function AccountsPlans() {
           <p className={styles.kicker}>Accounts</p>
           <h2 className={styles.title}>Find Your Perfect Trading Account</h2>
           <p className={styles.subtext}>
-            Find the ideal Stonefort Securities account tailored to your trading style, built for
-            flexibility, transparency, and performance.
+            Find the Stonefort account that fits your trading style, offering flexibility, transparency, and performance.
           </p>
         </div>
 
@@ -91,10 +90,10 @@ export default function AccountsPlans() {
 
               <div className={styles.actions}>
                 <a className={styles.btnPrimary} href="/accounts">
-                  View details
+                  View Details
                 </a>
                 <a className={styles.btnGhost} href="/signup">
-                  Open account
+                  Open Account
                 </a>
               </div>
 

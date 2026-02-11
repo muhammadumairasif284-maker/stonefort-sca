@@ -6,28 +6,28 @@ import { useEffect, useRef, useState } from "react";
 
 const cards = [
   {
-    title: "Transparent trading costs",
-    desc: "Stonefort provides clear information on trading costs. Fees, charges, and applicable costs are disclosed in advance in accordance with regulatory requirements.",
+    title: "Transparent Trading Costs",
+    desc: "Stonefort clearly discloses all fees and charges upfront, fully complying with regulatory standards.",
   },
   {
-    title: "Competitive pricing",
-    desc: "Clients can trade with spreads starting from 0 on EUR/USD, 2.3 cents on crude oil, and competitive spreads on gold. Spreads vary according to market conditions and liquidity.",
+    title: "Competitive Pricing",
+    desc: "Clients enjoy low spreads, from 0 on EUR/USD and 2.3 cents on crude oil, with competitive spreads on gold. Spreads may vary with market conditions and liquidity.",
   },
   {
-    title: "Regulated leverage framework",
-    desc: "Leverage is available up to 1:500 on major FX pairs and indices, 1:200 on gold, 1:50 on silver, and 1:100 on US crude, in accordance with client classification and regulatory requirements.",
+    title: "Regulated Leverage Framework",
+    desc: "Leverage is offered up to 1:500 on major FX and indices, 1:200 on gold, 1:50 on silver, and 1:100 on US crude, in line with client classification and regulatory rules.",
   },
   {
-    title: "Secure trading environment",
-    desc: "Client data is protected using internationally recognised information security standards and operational controls to ensure confidentiality and integrity.",
+    title: "Secure Trading Environment",
+    desc: "Client data is safeguarded with internationally recognized security standards and robust controls to ensure confidentiality and integrity.",
   },
   {
-    title: "UAE-focused presence",
-    desc: "Stonefort operates in the UAE and provides services in accordance with local regulatory requirements. The company is licensed and regulated by the UAE Securities and Commodities Authority (SCA).",
+    title: "UAE-Focused Presence",
+    desc: "Stonefort operates in the UAE, licensed and regulated by the Capital Market Authority (CMA), ensuring compliance with local regulations.",
   },
   {
-    title: "Client support",
-    desc: "Support is available 24/7, 365 Days, via phone, email, or WhatsApp, to assist with account and platform-related enquiries.",
+    title: "Client Support",
+    desc: "24/7, 365-day support is available via phone, email, or WhatsApp to assist with account and platform enquiries.",
   },
 ];
 
@@ -59,9 +59,9 @@ export default function WhyChoose() {
       <div className={styles.container}>
         <div className={styles.head}>
           {/* <p className={styles.kicker}>Next Section</p> */}
-          <h2 className={styles.title}>Why choose Stonefort?</h2>
+          <h2 className={styles.title}>Why Choose Stonefort?</h2>
           <p className={styles.sub}>
-            A regulated, UAE-focused broker experience with transparent pricing, strong controls, and continuous support.
+            Experience a regulated trading environment with transparent pricing, robust controls, and dedicated support.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function WhyChoose() {
 
         <div className={styles.ctaWrap}>
           <Link href="/live-account" className={styles.ctaBtn}>
-            Open an account
+            Open an Account
           </Link>
           <p className={styles.ctaNote}>
             Trading involves risk. Ensure you understand the products and risks before trading.

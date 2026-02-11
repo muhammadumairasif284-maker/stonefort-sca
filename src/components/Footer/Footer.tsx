@@ -8,7 +8,7 @@ const menu = [
   { href: "/market", label: "Market" },
   { href: "/accounts", label: "Accounts" },
   { href: "/platform", label: "Platform" },
-  { href: "/about", label: "About" },
+  { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact Us" },
 ];
 

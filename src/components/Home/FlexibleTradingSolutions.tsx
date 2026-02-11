@@ -12,7 +12,7 @@ const platforms: Platform[] = [
   {
     badge: "MetaTrader 5",
     title: "MetaTrader 5",
-    desc: "MetaTrader 5 (MT5) is the updated version of MT4, offering additional tools for trading multiple asset classes with Stonefort liquidity and execution.",
+    desc: "The upgraded version of MT4, MT5 offers enhanced tools for trading multiple asset classes with Stonefort liquidity and execution.",
     features: [
       "MQL5 support – Automated trading with Expert Advisors.",
       "Enhanced order types – Greater trade management options.",
@@ -21,16 +21,16 @@ const platforms: Platform[] = [
     cta: { label: "Explore MT5", href: "/platforms/mt5" },
   },
   {
-    badge: "StonefortTrader",
-    title: "StonefortTrader",
-    desc: "StonefortTrader is our proprietary app, providing tools for trading multiple asset classes with Stonefort liquidity and execution.",
+    badge: "Stonefortrader",
+    title: "Stonefortrader",
+    desc: "Stonefortrader is our proprietary platform, offering tools to trade multiple asset classes with Stonefort liquidity and execution.",
     features: [
       "Advanced trading tools – Widgets and calculators to support informed decisions.",
       "Technical indicators – Analyse trends and market movements.",
       "Real-time account insights – Monitor trading activity and performance.",
       "Multi-device access – Trade seamlessly on mobile, web, and desktop.",
     ],
-    cta: { label: "Explore StonefortTrader", href: "/platforms/stoneforttrader" },
+    cta: { label: "Explore Stonefortrader", href: "/platforms/stoneforttrader" },
   },
 ];
 
@@ -42,8 +42,7 @@ export default function FlexibleTradingSolutions() {
 
           <h2 className={styles.title}>Flexible Trading Solutions</h2>
           <p className={styles.subtext}>
-            Stonefort offers clients access to multiple trading platforms, including MT5 and
-            StonefortTrader, to suit different trading styles and preferences.
+            Stonefort offers clients access to multiple trading platforms, including MT5 and StonefortTrader, catering to diverse trading styles and preferences.
           </p>
         </header>
 

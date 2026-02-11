@@ -6,17 +6,16 @@ export default function CFDMarketsPro() {
     <section className={styles.section} aria-label="Our CFD markets">
       <div className={styles.inner}>
         <div className={styles.head}>
-          <h2 className={styles.title}>Our CFD markets</h2>
+          <h2 className={styles.title}>Our CFD Markets</h2>
           <p className={styles.desc}>
-            Stay informed with live market quotes, indices, and commodities.
-            Market data is indicative and for informational purposes only.
+            Access live quotes across indices and commodities. Market data is indicative and provided for informational purposes only.
           </p>
         </div>
 
         <MarketBoard />
 
         <a className={styles.browse} href="/market">
-          Browse all market →
+          Browse all markets →
         </a>
       </div>
     </section>

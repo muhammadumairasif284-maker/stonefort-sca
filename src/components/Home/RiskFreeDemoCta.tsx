@@ -9,13 +9,13 @@ export default function RiskFreeDemoCta() {
             <p className={styles.kicker}>Not ready to trade for real?</p>
             <h2 className={styles.title}>Try Our Platforms Risk-Free</h2>
             <p className={styles.text}>
-              Open a demo account to explore <strong>StonefortTrader</strong> and <strong>MT5</strong>{" "}
-              using virtual funds, without risking real money.
+              Open a demo account to explore <strong>Stonefortrader</strong> and <strong>MT5</strong>{" "}
+              with virtual funds - no real money required.
             </p>
 
             <div className={styles.actions}>
               <a className={styles.primaryBtn} href="/demo">
-                Open demo account <span className={styles.arrow} aria-hidden="true">→</span>
+                Open Demo Account <span className={styles.arrow} aria-hidden="true">→</span>
               </a>
               <a className={styles.ghostBtn} href="/platforms">
                 View platforms
@@ -33,7 +33,7 @@ export default function RiskFreeDemoCta() {
               <div className={styles.pill}>
                 <span className={styles.pillDot} />
                 <div>
-                  <div className={styles.pillTitle}>StonefortTrader</div>
+                  <div className={styles.pillTitle}>Stonefortrader</div>
                   <div className={styles.pillSub}>Proprietary platform</div>
                 </div>
               </div>

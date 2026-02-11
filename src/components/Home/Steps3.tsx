@@ -12,14 +12,14 @@ const STEPS: Step[] = [
   {
     n: "01",
     title: "Create Account",
-    text: "Sign up and verify your account in a few minutes.",
+    text: "Sign up and complete verification in just a few minutes.",
     ctaLabel: "Open Account",
     href: "/signup",
   },
   {
     n: "02",
     title: "Fund Your Account",
-    text: "Add funds to your account using approved deposit methods.",
+    text: "Add funds securely using our approved deposit methods.",
     ctaLabel: "Deposit",
     href: "/deposit",
   },

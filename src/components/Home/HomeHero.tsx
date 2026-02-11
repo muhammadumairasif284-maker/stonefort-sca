@@ -8,19 +8,15 @@ export default function HomeHero() {
       <div className={styles.container}>
         {/* Left content */}
         <div className={styles.left}>
-          <div className={styles.badge}>
-            <span className={styles.dot} aria-hidden="true" />
-            CMA regulated UAE broker
-          </div>
+
 
           <h1 className={styles.h1}>
-            Online trading with an <span className={styles.hl}>CMA regulated</span> UAE broker
+            Online trading with a <span className={styles.hl}>CMA regulated</span> UAE broker
           </h1>
 
           <p className={styles.lead}>
             Access global financial markets through secure online trading platforms and manage your
-            investment portfolio in a regulated environment. The broker operates under a licence issued
-            by the UAE Capital Market Authority (CMA).
+            investment portfolio in a regulated environment. 
           </p>
 
           <div className={styles.ctaRow}>
