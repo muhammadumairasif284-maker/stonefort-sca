@@ -1,0 +1,222 @@
+.section{
+  --bg:#101711;
+  --text:#eaf0f2;
+  --muted:rgba(234,240,242,.70);
+  --green:#4D6E55;
+  --mint:#87AB93;
+
+  background: var(--bg);
+  color: var(--text);
+  padding: 72px 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* soft mint glow */
+.section::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width: 1200px;
+  height: 460px;
+  transform: translate(-50%, -50%);
+  background:
+    radial-gradient(closest-side, rgba(135,171,147,.22), rgba(77,110,85,.12) 45%, transparent 70%);
+  filter: blur(24px);
+  pointer-events:none;
+}
+
+.inner{
+  max-width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header{
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.kicker{
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(234,240,242,.60);
+}
+
+.title{
+  margin: 0 0 10px;
+  font-size: clamp(26px, 3.1vw, 40px);
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.subtext{
+  margin: 0 auto;
+  max-width: 78ch;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 15.5px;
+}
+
+/* two horizontal options */
+.row{
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 14px;
+}
+
+.card{
+  grid-column: span 12;
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 18px 60px rgba(0,0,0,.45);
+  position: relative;
+  overflow: hidden;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius: 20px;
+  background:
+    radial-gradient(560px 200px at 15% 10%, rgba(135,171,147,.16), transparent 60%),
+    radial-gradient(520px 200px at 90% 12%, rgba(77,110,85,.14), transparent 62%);
+  pointer-events:none;
+  opacity: .9;
+}
+
+.card:hover{
+  transform: translateY(-3px);
+  background: rgba(255,255,255,.03);
+  border-color: rgba(135,171,147,.24);
+}
+
+.top{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+.badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+
+  color: rgba(234,240,242,.92);
+  background: rgba(77,110,85,.22);
+  border: 1px solid rgba(135,171,147,.30);
+}
+
+.cardTitle{
+  position: relative;
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
+
+.cardDesc{
+  position: relative;
+  margin: 0 0 14px;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 14.6px;
+}
+
+.features{
+  position: relative;
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 12px;
+}
+
+.featuresTitle{
+  margin: 0 0 10px;
+  font-size: 13px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(234,240,242,.70);
+  font-weight: 900;
+}
+
+.list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.item{
+  display: grid;
+  grid-template-columns: 12px 1fr;
+  gap: 10px;
+  align-items: start;
+  color: rgba(234,240,242,.82);
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.dot{
+  width: 10px;
+  height: 10px;
+  margin-top: 4px;
+  border-radius: 999px;
+  background: var(--mint);
+  box-shadow: 0 0 0 5px rgba(135,171,147,.14);
+}
+
+.ctaRow{
+  position: relative;
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.linkBtn{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--text);
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 12px;
+
+  background: rgba(77,110,85,.22);
+  border: 1px solid rgba(135,171,147,.30);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+
+.linkBtn:hover{
+  transform: translateY(-1px);
+  background: rgba(77,110,85,.30);
+  border-color: rgba(135,171,147,.45);
+}
+
+.arrow{
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* responsive */
+@media (min-width: 900px){
+  .card{ grid-column: span 6; }
+}

@@ -1,0 +1,297 @@
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--background);
+}
+
+/* Shared width */
+.container{
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* 1) Risk bar */
+.risk{
+  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,.03);
+}
+.riskText{
+  padding: 10px 0;
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+/* 2) Main row */
+.top{
+  border-bottom: 1px solid var(--border);
+}
+.containerTop{
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 0;
+}
+
+/* Brand */
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 260px;
+}
+.logoLink{ display: inline-flex; }
+.logo{
+  width: auto;
+  height: auto;
+  max-height: 44px;
+  object-fit: contain;
+  display: block;
+}
+.scaTag{
+  font-size: 12px;
+  color: #d7eadf;
+  border: 1px solid rgba(77,110,85,.35);
+  background: rgba(77,110,85,.12);
+  padding: 6px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Desktop nav */
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.link{
+  font-size: 14px;
+  color: var(--muted);
+  padding: 8px 10px;
+  border-radius: 12px;
+  transition: background .15s ease, color .15s ease;
+}
+.link:hover{
+  color: var(--foreground);
+  background: rgba(255,255,255,.05);
+}
+
+/* Actions */
+.actions{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 190px;
+  justify-content: flex-end;
+}
+.login{
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.02);
+}
+.live{
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 800;
+  color: #08100a;
+  background: var(--sfs-mint);
+}
+
+/* Menu toggle button (hidden on desktop) */
+.menuBtn{
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.03);
+  align-items: center;
+  justify-content: center;
+}
+.menuBtn:active{ transform: translateY(1px); }
+
+.menuIcon{
+  width: 18px;
+  height: 12px;
+  position: relative;
+  display: block;
+}
+.menuIcon::before,
+.menuIcon::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  height:2px;
+  background: rgba(234,240,242,.9);
+  border-radius: 2px;
+}
+.menuIcon::before{ top:0; }
+.menuIcon::after{ bottom:0; }
+.menuIcon{
+  background: rgba(234,240,242,.9);
+  height: 2px;
+  border-radius: 2px;
+}
+
+/* Drawer */
+.drawerWrap{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+}
+.drawerOpen{
+  pointer-events: auto;
+}
+
+.backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  opacity: 0;
+  transition: opacity .18s ease;
+}
+.drawer{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: min(360px, 88vw);
+  background: rgba(16,23,17,.98);
+  border-left: 1px solid rgba(255,255,255,.12);
+  transform: translateX(100%);
+  transition: transform .18s ease;
+  padding: 16px;
+}
+
+.drawerOpen .backdrop{ opacity: 1; }
+.drawerOpen .drawer{ transform: translateX(0); }
+
+.drawerTop{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+}
+.drawerTitle{
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+.closeBtn{
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  color: var(--foreground);
+  font-size: 16px;
+}
+
+.drawerNav{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 0;
+}
+.drawerLink{
+  padding: 12px 12px;
+  border-radius: 12px;
+  color: var(--foreground);
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.06);
+}
+.drawerLink:hover{
+  background: rgba(255,255,255,.05);
+}
+
+.drawerActions{
+  display: grid;
+  gap: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+.drawerLogin{
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.02);
+  text-align: center;
+}
+.drawerLive{
+  padding: 12px 12px;
+  border-radius: 12px;
+  font-weight: 900;
+  color: #08100a;
+  background: var(--sfs-mint);
+  text-align: center;
+}
+
+/* 3) Meta bar */
+.meta{
+  border-bottom: 1px solid var(--border);
+  background: rgba(16,23,17,.92);
+  backdrop-filter: blur(10px);
+}
+.containerMeta{
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.metaItem{
+  border: 1px solid rgba(255,255,255,.06);
+  background: rgba(255,255,255,.02);
+  border-radius: 16px;
+  padding: 10px 12px;
+  text-align: center;
+}
+.metaValue{
+  display: block;
+  font-weight: 900;
+  letter-spacing: .2px;
+}
+.metaLabel{
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Responsive:
+   - Tablet: show menu button, hide desktop nav
+   - Small: meta bar 2 columns, hide SCA pill */
+@media (max-width: 920px){
+  .nav{ display:none; }
+  .menuBtn{ display:flex; }
+
+  /*  Hide header actions on tablet/mobile to avoid duplicate buttons */
+  .actions{ display:none; }
+
+  .containerTop{
+    justify-content: space-between;
+  }
+
+  .brand{ min-width: unset; }
+}
+
+@media (max-width: 560px){
+  .containerMeta{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .scaTag{
+    display: none;
+  }
+}

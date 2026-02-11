@@ -1,0 +1,83 @@
+/* Non-movable (sticky) meta bar */
+.wrap{
+  position: sticky;
+  top: 0;                 /* if you want it under header later, we can set top: var(...) */
+  z-index: 40;
+  background: rgba(16,23,17,.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* width container */
+.container{
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* each pill */
+.item{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 12px;
+  border-radius: 18px;
+  /* background: rgba(255,255,255,.02); */
+  border: 1px solid rgba(255,255,255,.06);
+  box-shadow: 0 14px 40px rgba(0,0,0,.25);
+}
+
+/* .iconWrap{
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.06);
+  overflow: hidden; 
+} */
+
+/* .icon{
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+} */
+.text{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.05;
+}
+
+.value{
+  font-weight: 900;
+  letter-spacing: .2px;
+  color: var(--foreground);
+  font-size: 15px;
+}
+
+.label{
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* responsive */
+@media (max-width: 920px){
+  .container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px){
+  .item{
+    padding: 10px 10px;
+    gap: 10px;
+  }
+  .value{ font-size: 14px; }
+  .label{ font-size: 11.5px; }
+}

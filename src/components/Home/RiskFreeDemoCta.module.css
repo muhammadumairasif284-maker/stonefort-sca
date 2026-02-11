@@ -1,0 +1,242 @@
+.section{
+  --bg:#101711;
+  --text:#eaf0f2;
+  --muted:rgba(234,240,242,.72);
+  --green:#4D6E55;
+  --mint:#87AB93;
+
+  background: var(--bg);
+  color: var(--text);
+  padding: 54px 16px 64px;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner{
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* Banner container */
+.banner{
+  position: relative;
+  border-radius: 22px;
+  padding: 22px;
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 22px 80px rgba(0,0,0,.55);
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+/* Soft glows */
+.banner::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius: 24px;
+  background:
+    radial-gradient(700px 240px at 15% 20%, rgba(135,171,147,.18), transparent 60%),
+    radial-gradient(760px 240px at 85% 10%, rgba(77,110,85,.14), transparent 62%);
+  pointer-events:none;
+}
+
+.left{
+  position: relative;
+  z-index: 1;
+}
+
+.kicker{
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(234,240,242,.62);
+  font-weight: 800;
+}
+
+.title{
+  margin: 0 0 10px;
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.08;
+  font-weight: 950;
+  letter-spacing: -0.3px;
+}
+
+.text{
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+  font-size: 15.5px;
+  max-width: 70ch;
+}
+
+.actions{
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.primaryBtn{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 900;
+  background: var(--green);
+  border: 1px solid rgba(0,0,0,.35);
+  box-shadow: 0 18px 50px rgba(77, 110, 85, 0.26);
+  transition: transform .18s ease, filter .18s ease;
+}
+
+.primaryBtn:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+.ghostBtn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 900;
+  background: rgba(77,110,85,.18);
+  border: 1px solid rgba(135,171,147,.28);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+}
+
+.ghostBtn:hover{
+  transform: translateY(-1px);
+  background: rgba(77,110,85,.26);
+  border-color: rgba(135,171,147,.44);
+}
+
+.arrow{
+  font-size: 16px;
+  line-height: 1;
+}
+
+.note{
+  margin: 12px 0 0;
+  font-size: 12.5px;
+  color: rgba(234,240,242,.60);
+}
+
+/* Right side visuals */
+.right{
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+}
+
+.orb{
+  position:absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(135,171,147,.35), transparent 55%),
+    radial-gradient(circle at 70% 60%, rgba(77,110,85,.25), transparent 60%);
+  filter: blur(2px);
+  opacity: .9;
+}
+
+.stack{
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  display: grid;
+  gap: 12px;
+}
+
+.pill{
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 12px;
+  align-items: center;
+
+  padding: 14px 14px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 14px 42px rgba(0,0,0,.35);
+}
+
+.pillDot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--mint);
+  box-shadow: 0 0 0 6px rgba(135,171,147,.14);
+}
+
+.pillTitle{
+  font-weight: 950;
+  letter-spacing: -0.2px;
+}
+
+.pillSub{
+  margin-top: 2px;
+  font-size: 12.5px;
+  color: rgba(234,240,242,.68);
+}
+
+.miniStats{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.stat{
+  border-radius: 16px;
+  padding: 12px 12px;
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.statTop{
+  font-size: 12px;
+  color: rgba(234,240,242,.62);
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.statVal{
+  margin-top: 6px;
+  font-weight: 950;
+  font-size: 13.5px;
+}
+
+/* Responsive: 2 columns on desktop */
+@media (min-width: 980px){
+  .banner{
+    grid-template-columns: 1.2fr .8fr;
+    padding: 28px;
+    gap: 22px;
+    align-items: center;
+  }
+  .right{
+    justify-self: end;
+    width: 100%;
+  }
+}
+
+/* Divider line */
+.divider{
+  height: 1px;
+  background: rgba(255,255,255,.08);
+  margin-top: 22px;
+}
