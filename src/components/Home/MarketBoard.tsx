@@ -1,70 +1,99 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styles from "./CFDMarketsPro.module.css";
 import TvMiniPills from "./TvMiniPills";
 import TvSymbolInfo from "./TvSymbolInfo";
 import TvAdvancedChart from "./TvAdvancedChart";
 
 type GroupKey = "All" | "Commodities" | "Indices" | "Forex";
+type SortKey = "most" | "top" | "popular";
 
 const GROUPS: Record<GroupKey, { label: string; symbols: string[] }> = {
   All: {
     label: "All",
-    symbols: ["TVC:USOIL", "TVC:GOLD", "TVC:NATGAS", "NASDAQ:NDX", "SP:SPX", "FX:XAUUSD"],
+    symbols: [
+      // Commodities
+      "TVC:USOIL",
+      "TVC:GOLD",
+      "TVC:NATGAS",
+
+      // Indices (CFD style - embed-friendly)
+      "OANDA:NAS100USD",
+      "OANDA:SPX500USD",
+      "OANDA:US30USD",
+
+      // Forex
+      "FX:EURUSD",
+      "FX:GBPUSD",
+      "FX:USDJPY",
+    ],
   },
+
   Commodities: {
     label: "Commodities",
     symbols: ["TVC:USOIL", "TVC:GOLD", "TVC:NATGAS"],
   },
+
   Indices: {
     label: "Indices",
-    symbols: ["NASDAQ:NDX", "SP:SPX"],
+    symbols: ["OANDA:NAS100USD", "OANDA:SPX500USD", "OANDA:US30USD"],
   },
+
   Forex: {
     label: "Forex",
-    symbols: ["FX:XAUUSD", "FX:EURUSD", "FX:GBPUSD"],
+    symbols: ["FX:EURUSD", "FX:GBPUSD", "FX:USDJPY"],
   },
 };
 
-const SORTS = [
+const SORTS: { key: SortKey; label: string }[] = [
   { key: "most", label: "Most traded" },
   { key: "top", label: "Top movers" },
   { key: "popular", label: "Popular" },
-] as const;
+];
 
 export default function MarketBoard() {
   const [group, setGroup] = useState<GroupKey>("All");
-  const [sort, setSort] = useState<(typeof SORTS)[number]["key"]>("most");
+  const [sort, setSort] = useState<SortKey>("most");
 
   // Default selected symbol
-  const [activeSymbol, setActiveSymbol] = useState("TVC:USOIL");
+  const [activeSymbol, setActiveSymbol] = useState<string>(GROUPS.All.symbols[0]);
 
   const symbols = useMemo(() => {
-    // You can later change ordering based on `sort` (client-side)
-    return GROUPS[group].symbols;
-  }, [group]);
+    const base = GROUPS[group].symbols;
 
-  // Keep activeSymbol valid when group changes
-  useMemo(() => {
-    if (!symbols.includes(activeSymbol)) setActiveSymbol(symbols[0]);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [symbols.join("|")]);
+    // Optional: reorder based on sort (you can change this logic later)
+    if (sort === "most") return base;
+    if (sort === "top") return base; // placeholder
+    if (sort === "popular") return base; // placeholder
+
+    return base;
+  }, [group, sort]);
+
+  // Keep activeSymbol valid when group/sort changes
+  useEffect(() => {
+    if (!symbols.length) return;
+    if (!symbols.includes(activeSymbol)) {
+      setActiveSymbol(symbols[0]);
+    }
+  }, [symbols, activeSymbol]);
 
   return (
     <div className={styles.board}>
       {/* Top filters */}
       <div className={styles.filters}>
         <div className={styles.selectWrap}>
-          <label className={styles.label}> </label>
+          <label className={styles.label} aria-label="Market group">
+            {" "}
+          </label>
           <select
             className={styles.select}
             value={group}
             onChange={(e) => setGroup(e.target.value as GroupKey)}
           >
-            {Object.keys(GROUPS).map((k) => (
+            {(Object.keys(GROUPS) as GroupKey[]).map((k) => (
               <option key={k} value={k}>
-                {GROUPS[k as GroupKey].label}
+                {GROUPS[k].label}
               </option>
             ))}
           </select>
@@ -75,7 +104,7 @@ export default function MarketBoard() {
           <select
             className={styles.select}
             value={sort}
-            onChange={(e) => setSort(e.target.value as any)}
+            onChange={(e) => setSort(e.target.value as SortKey)}
           >
             {SORTS.map((s) => (
               <option key={s.key} value={s.key}>

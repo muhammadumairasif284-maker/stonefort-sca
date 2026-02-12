@@ -48,7 +48,7 @@
 .logo{
   width: auto;
   height: auto;
-  max-height: 44px;
+  max-height: 84px;
   object-fit: contain;
   display: block;
 }
@@ -101,11 +101,11 @@
   padding: 10px 14px;
   border-radius: 12px;
   font-weight: 800;
-  color: #08100a;
-  background: var(--sfs-mint);
+  color: #fff;
+  background: #4d6e55;
 }
 
-/* Menu toggle button (hidden on desktop) */
+
 .menuBtn{
   display: none;
   width: 44px;

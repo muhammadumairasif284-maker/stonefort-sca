@@ -28,7 +28,7 @@ export default function Footer() {
         <div className={styles.logoRow}>
           <Link href="/" className={styles.brand} aria-label="Stonefort home">
             <Image
-              src="/logo/Logo-Light-Good-quality.png"
+              src="/logo/stonefortLogo.png"
               alt="Stonefort Securities"
               width={220}
               height={52}
@@ -80,22 +80,7 @@ export default function Footer() {
         {/* Legal / risk */}
         <div className={styles.legalBox}>
           <p className={styles.legalText}>
-            <strong>Risk Warning:</strong> Trading Contracts for Difference (CFDs) on margin involves
-            a high level of risk and may not be suitable for all investors. You may lose more than
-            your initial investment. Ensure you fully understand the risks and consider whether you
-            can afford to take the high risk of losing your money.
-          </p>
-
-          <p className={styles.legalText}>
-            <strong>Product details:</strong> Availability of instruments, leverage, spreads and
-            account features may vary by jurisdiction, regulatory requirements and client
-            classification. Past performance is not a reliable indicator of future results.
-          </p>
-
-          <p className={styles.legalText}>
-            <strong>License details:</strong> Stonefort Securities operates in accordance with
-            applicable local regulatory requirements. For full licensing information, please refer
-            to the legal documents on this website.
+            Stonefort Securities LLC (SFS) is licensed by the Capital Market Authority (CMA), UAE, under Category 5 (License No. 20200000226). SFS is authorized solely to conduct marketing and promotional activities and to introduce clients to financial products and services offered by duly licensed entities. SFS does not provide investment services.
           </p>
         </div>
 

@@ -18,7 +18,7 @@ export default function RiskFreeDemoCta() {
                 Open Demo Account <span className={styles.arrow} aria-hidden="true">→</span>
               </a>
               <a className={styles.ghostBtn} href="/platforms">
-                View platforms
+                View Platforms
               </a>
             </div>
 

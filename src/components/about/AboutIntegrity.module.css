@@ -1,0 +1,171 @@
+.section{
+  position: relative;
+  padding: 84px 0;
+  overflow: hidden;
+}
+
+/* soft premium glow */
+.section::before{
+  content:"";
+  position:absolute;
+  width: 520px;
+  height: 720px;
+  left: -210px;
+  top: -70px;
+  background: radial-gradient(closest-side, rgba(135,171,147,.22), transparent 70%);
+  filter: blur(18px);
+  pointer-events:none;
+}
+
+.container{
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 34px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.left{
+  max-width: 72ch;
+}
+
+.title{
+  margin: 0 0 14px;
+  color: #fff;
+  font-weight: 850;
+  font-size: 30px;
+  line-height: 1.18;
+}
+
+.lead{
+  margin: 0 0 14px;
+  color: rgba(255,255,255,.86);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.text{
+  margin: 0;
+  color: var(--sfs-grey);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* CTAs */
+.ctaRow{
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ctaPrimary{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 750;
+  font-size: 14px;
+  color: #fff;
+  background: var(--sfs-green-main);
+  border: 1px solid rgba(135,171,147,.28);
+  box-shadow: 0 18px 46px rgba(77,110,85,.28);
+  transition: transform .15s ease, filter .15s ease, box-shadow .15s ease;
+}
+
+.ctaPrimary:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 24px 64px rgba(77,110,85,.36);
+}
+
+.ctaGhost{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 750;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.12);
+  transition: transform .15s ease, filter .15s ease, border-color .15s ease;
+}
+
+.ctaGhost:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+  border-color: rgba(135,171,147,.35);
+}
+
+/* Right mockup */
+.right{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mockupWrap{
+  position: relative;
+  width: min(520px, 100%);
+  height: 360px;
+}
+
+.mockupCard{
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,.10);
+  background:
+    radial-gradient(closest-side, rgba(135,171,147,.16), transparent 70%),
+    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  box-shadow: 0 26px 80px rgba(0,0,0,.52);
+  overflow: hidden;
+}
+
+/* If you use an actual image */
+.mockupImg{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 22px;
+}
+
+.mockupGlow{
+  position: absolute;
+  inset: -90px -110px auto auto;
+  width: 380px;
+  height: 380px;
+  background:
+    radial-gradient(closest-side, rgba(135,171,147,.30), transparent 70%),
+    radial-gradient(closest-side, rgba(77,110,85,.24), transparent 72%);
+  filter: blur(24px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+@media (max-width: 980px){
+  .container{
+    grid-template-columns: 1fr;
+  }
+  .right{
+    justify-content: flex-start;
+  }
+  .mockupWrap{
+    width: 100%;
+    height: 320px;
+    margin-top: 10px;
+  }
+  .title{
+    font-size: 26px;
+  }
+}

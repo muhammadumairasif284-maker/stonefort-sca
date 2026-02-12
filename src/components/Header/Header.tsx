@@ -56,7 +56,7 @@ export default function Header() {
           <div className={styles.brand} aria-label="Stonefort Securities">
             <Link href="/" className={styles.logoLink} onClick={closeMenu}>
               <Image
-                src="/logo/Logo-Light-Good-quality.png"
+                src="/logo/stonefortLogo.png"
                 alt="Stonefort Securities"
                 width={220}
                 height={60}

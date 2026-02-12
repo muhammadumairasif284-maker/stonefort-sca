@@ -16,16 +16,24 @@ export default function TvSymbolInfo({ symbol }: { symbol: string }) {
       "https://s3.tradingview.com/external-embedding/embed-widget-symbol-info.js";
     script.async = true;
 
-script.innerHTML = JSON.stringify({
-  symbol,
-  width: "100%",
-  locale: "en",
-  colorTheme: "dark",
-  isTransparent: true,
-});
+    script.innerHTML = JSON.stringify({
+      symbol,
+      width: "100%",
+      locale: "en",
+      colorTheme: "dark",
+      isTransparent: false, // can be true/false; overlay works either way
+    });
 
     container.appendChild(script);
+
+    return () => {
+      container.innerHTML = "";
+    };
   }, [id, symbol]);
 
-  return <div id={id} className={styles.symbolInfo}></div>;
+  return (
+    <div className={styles.symbolInfoGlass}>
+      <div id={id} className={styles.symbolInfo} />
+    </div>
+  );
 }

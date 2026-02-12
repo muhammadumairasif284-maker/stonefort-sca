@@ -27,7 +27,7 @@ export default function TvMiniPills({
 script.innerHTML = JSON.stringify({
   symbols: symbols.map((s) => ({ proName: s, title: s.split(":")[1] })),
   showSymbolLogo: true,
-  isTransparent: true,
+  isTransparent: false,
   displayMode: "adaptive",
   colorTheme: "dark",
   locale: "en",

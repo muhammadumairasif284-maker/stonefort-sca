@@ -81,6 +81,14 @@
   font-size: 13px;
   letter-spacing: .10em;
   text-transform: uppercase;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  
+
+
 }
 
 /* Social icons */

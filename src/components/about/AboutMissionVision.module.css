@@ -1,0 +1,89 @@
+.section{
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.container{
+  width: min(1000px, calc(100% - 32px));
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading{
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+/* Vertical layout */
+.cards{
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Card styling */
+.card{
+  padding: 36px 34px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  backdrop-filter: blur(6px);
+  transition: all .25s ease;
+}
+
+.card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(135,171,147,.4);
+  box-shadow: 0 30px 80px rgba(77,110,85,.25);
+}
+
+.card h3{
+  margin: 16px 0 14px;
+  font-size: 20px;
+  font-weight: 750;
+  color: #fff;
+}
+
+.card p{
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--sfs-grey);
+}
+
+/* Icon circle */
+.icon{
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    circle,
+    rgba(135,171,147,.35),
+    rgba(77,110,85,.25)
+  );
+  font-size: 26px;
+  color: #fff;
+  box-shadow: 0 15px 40px rgba(77,110,85,.3);
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .heading{
+    font-size: 24px;
+  }
+
+  .card{
+    padding: 28px 24px;
+  }
+
+  .card p{
+    font-size: 14px;
+  }
+}
