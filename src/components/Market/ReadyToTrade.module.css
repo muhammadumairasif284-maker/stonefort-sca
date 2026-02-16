@@ -145,7 +145,7 @@
   position: relative;
   padding: 28px 0 8px;
 }
-
+/* 
 .rail{
   position:absolute;
   left: 0;
@@ -183,7 +183,7 @@
   background: radial-gradient(closest-side, rgba(135,171,147,.12), transparent 70%);
   filter: blur(12px);
   opacity: .9;
-}
+} */
 
 .stepsGrid{
   display:grid;
@@ -220,7 +220,7 @@
   justify-content:center;
   z-index: 3;
 } */
-
+/* 
 .nodeGlow{
   position:absolute;
   inset:-18px;
@@ -230,16 +230,16 @@
   opacity: 0;
   transition: opacity .22s ease;
   pointer-events:none;
-}
+} */
 
-.node::after{
+/* .node::after{
   content:"";
   width: 8px;
   height: 8px;
   border-radius: 999px;
   background: rgba(255,255,255,.78);
   opacity: .75;
-}
+} */
 
 /* ONLY hovered node glows */
 .nodeHot{
