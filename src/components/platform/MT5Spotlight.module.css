@@ -1,0 +1,208 @@
+/* components/platform/MT5Spotlight/MT5Spotlight.module.css */
+
+.section{
+  position: relative;
+  padding: 110px 0;
+  background: #101711;
+  overflow: hidden;
+}
+
+/* Different vibe: diagonal light sweep + fog */
+.section::before{
+  content:"";
+  position:absolute;
+  inset:-200px;
+  background:
+    radial-gradient(900px 520px at 20% 25%, rgba(77,110,85,.26), transparent 65%),
+    radial-gradient(900px 520px at 85% 70%, rgba(135,171,147,.14), transparent 65%),
+    linear-gradient(115deg, rgba(255,255,255,.06), transparent 35%, transparent 70%, rgba(255,255,255,.04));
+  filter: blur(22px);
+  pointer-events:none;
+}
+
+.inner{
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 46px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* LEFT VISUAL */
+.visual{
+  position: relative;
+}
+
+.visualFrame{
+  border-radius: 26px;
+  overflow: hidden;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(135,171,147,.18);
+  box-shadow:
+    0 24px 70px rgba(0,0,0,.45),
+    0 0 0 1px rgba(77,110,85,.12) inset;
+}
+
+.visualImg{
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1.02);
+}
+
+.visualGlow{
+  position:absolute;
+  inset:-40px;
+  background:
+    radial-gradient(520px 340px at 55% 45%, rgba(77,110,85,.35), transparent 68%);
+  filter: blur(45px);
+  pointer-events:none;
+  z-index:-1;
+}
+
+/* RIGHT CONTENT */
+.content{
+  position: relative;
+}
+
+.kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size: 12px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(135,171,147,.95);
+  margin-bottom: 10px;
+}
+
+.title{
+  margin: 0 0 12px;
+  font-size: 36px;
+  line-height: 1.12;
+  color: #fff;
+  font-weight: 780;
+}
+
+.desc{
+  margin: 0 0 26px;
+  color: #88918B;
+  font-size: 14.5px;
+  line-height: 1.75;
+  max-width: 520px;
+}
+
+/* UNIQUE LIST STYLE: numbered rows + vertical rail */
+.list{
+  position: relative;
+  display: grid;
+  gap: 18px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+.rail{
+  position:absolute;
+  left: 24px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgba(135,171,147,.10),
+    rgba(77,110,85,.45),
+    rgba(135,171,147,.10)
+  );
+  opacity: .9;
+}
+
+.row{
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 14px 14px 14px 6px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(135,171,147,.12);
+  backdrop-filter: blur(10px);
+  transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
+
+.row:hover{
+  transform: translateY(-4px);
+  border-color: rgba(77,110,85,.55);
+  box-shadow: 0 18px 50px rgba(77,110,85,.18);
+}
+
+.num{
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight: 850;
+  color: #ffffff;
+  background: linear-gradient(180deg, rgba(77,110,85,.35), rgba(16,23,17,.15));
+  border: 1px solid rgba(135,171,147,.22);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.text h3{
+  margin: 2px 0 6px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 720;
+}
+
+.text p{
+  margin: 0;
+  color: rgba(255,255,255,.82);
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+/* CTA */
+.ctaRow{
+  margin-top: 22px;
+}
+
+.cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 13px 18px;
+  border-radius: 999px;
+  text-decoration:none;
+  font-size: 14px;
+  font-weight: 650;
+  color: #fff;
+  background: #4D6E55;
+  border: 1px solid rgba(135,171,147,.25);
+  box-shadow: 0 18px 50px rgba(77,110,85,.22);
+  transition: transform .3s ease, background .3s ease;
+}
+
+.cta:hover{
+  transform: translateY(-2px);
+  background: #55816E;
+}
+
+/* RESPONSIVE */
+@media (max-width: 980px){
+  .inner{
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .title{ font-size: 30px; }
+}
+
+@media (max-width: 520px){
+  .section{ padding: 90px 0; }
+  .row{ grid-template-columns: 52px 1fr; }
+  .num{ width: 42px; height: 42px; }
+}

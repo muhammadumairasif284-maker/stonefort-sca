@@ -1,0 +1,133 @@
+/* ExecutionOutcomes.module.css */
+
+.section {
+  position: relative;
+  padding: 110px 0;
+  background: #101711;
+  overflow: hidden;
+}
+
+/* center glow */
+/* .section::before {
+  content: "";
+  position: absolute;
+  inset: -200px;
+  background:
+    radial-gradient(800px 500px at 50% 20%, rgba(77,110,85,.35), transparent 70%),
+    radial-gradient(700px 500px at 50% 80%, rgba(135,171,147,.15), transparent 70%);
+  filter: blur(90px);
+  pointer-events: none;
+} */
+
+.inner {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+/* LEFT */
+
+.left {
+  max-width: 520px;
+}
+
+.title {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 750;
+  color: #ffffff;
+  margin-bottom: 22px;
+}
+
+.desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #88918B;
+}
+
+/* RIGHT CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  position: relative;
+  min-height: 320px;
+  border-radius: 22px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(135,171,147,.18);
+  transition: all .4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #4D6E55;
+  box-shadow: 0 20px 60px rgba(77,110,85,.30);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(16,23,17,.65), rgba(16,23,17,.85)),
+    radial-gradient(600px 400px at 50% 0%, rgba(135,171,147,.12), transparent 60%);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 32px 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.kpi {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.content p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.90);
+}
+
+.note {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #87AB93;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+}

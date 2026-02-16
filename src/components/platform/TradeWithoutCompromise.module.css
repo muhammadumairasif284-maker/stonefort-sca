@@ -1,0 +1,130 @@
+.section{
+  padding: 90px 0 100px;
+  background: var(--sfs-black);
+  position: relative;
+  overflow: hidden;
+}
+
+/* premium background */
+/* .section::before{
+  content:"";
+  position:absolute;
+  inset:-200px -160px -200px;
+  background:
+    radial-gradient(900px 520px at 20% 20%, rgba(77,110,85,.25), transparent 60%),
+    radial-gradient(900px 520px at 80% 25%, rgba(135,171,147,.18), transparent 60%),
+    radial-gradient(1200px 900px at 50% 75%, rgba(0,0,0,.6), transparent 65%);
+  filter: blur(12px);
+  pointer-events:none;
+} */
+
+.container{
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== TOP CENTERED ===== */
+
+.top{
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.title{
+  font-size: 40px;
+  font-weight: 780;
+  color: #fff;
+  margin: 0 0 12px;
+}
+
+.sub{
+  color: rgba(136,145,139,.95);
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.pillRow{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.pill{
+  padding:6px 14px;
+  border-radius:999px;
+  font-size:12px;
+  background: rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  color:#fff;
+}
+
+/* ===== GRID ===== */
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:16px;
+  margin-bottom: 20px;
+}
+
+.card{
+  border-radius: 18px;
+  padding: 22px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 22px 70px rgba(0,0,0,.4);
+  transition: .2s ease;
+}
+
+.card:hover{
+  transform: translateY(-4px);
+  border-color: rgba(135,171,147,.35);
+  background: rgba(255,255,255,.07);
+}
+
+.tag{
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color: rgba(136,145,139,.95);
+  margin-bottom:10px;
+}
+
+.cardTitle{
+  font-size:18px;
+  font-weight:760;
+  color:#fff;
+  margin-bottom:8px;
+}
+
+.cardDesc{
+  font-size:14px;
+  line-height:1.6;
+  color: rgba(136,145,139,.95);
+}
+
+/* ===== LONG CARD ===== */
+
+.longCard{
+  border-radius: 20px;
+  padding: 28px;
+  background: linear-gradient(90deg, rgba(77,110,85,.25), rgba(255,255,255,.05));
+  border: 1px solid rgba(135,171,147,.25);
+  box-shadow: 0 30px 90px rgba(0,0,0,.45);
+  transition: .2s ease;
+}
+
+.longCard:hover{
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
