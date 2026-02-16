@@ -1,0 +1,132 @@
+.section{
+  position: relative;
+  padding: 120px 0 0 0;
+  background: #101711;
+  overflow: hidden;
+}
+
+/* Glow */
+.section::before{
+  content:"";
+  position:absolute;
+  inset:-200px;
+  background:
+    radial-gradient(900px 600px at 75% 40%, rgba(77,110,85,.28), transparent 60%),
+    radial-gradient(800px 500px at 20% 60%, rgba(135,171,147,.15), transparent 60%);
+  filter: blur(70px);
+  pointer-events:none;
+}
+
+/* LEFT CONTENT CONTAINER */
+.container{
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.left{
+  max-width: 600px;
+}
+
+/* TITLE */
+.title{
+  font-size: 46px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 40px;
+}
+
+.title span{
+  color: var(--sfs-mint);
+}
+
+/* CARDS */
+.features{
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.card{
+  padding: 24px 28px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(135,171,147,.15);
+  backdrop-filter: blur(14px);
+  transition: all .35s ease;
+}
+
+.card:hover{
+  background: rgba(135,171,147,.08);
+  border-color: rgba(135,171,147,.35);
+  box-shadow: 0 0 40px rgba(135,171,147,.18);
+}
+
+.card h3{
+  color: #fff;
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.card p{
+  color: var(--sfs-grey);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* RIGHT IMAGE — FULL EDGE */
+.rightImage{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.image{
+  width: 620px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 50px 80px rgba(0,0,0,.7));
+}
+
+/* CTA */
+.ctaWrap{
+  text-align: center;
+  margin-top: 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.cta{
+  padding: 16px 50px;
+  border-radius: 14px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--sfs-green-main), var(--sfs-mint));
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 40px rgba(135,171,147,.35);
+  transition: .3s ease;
+}
+
+.cta:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 0 60px rgba(135,171,147,.55);
+}
+
+/* Responsive */
+@media (max-width: 1100px){
+  .rightImage{
+    position: relative;
+    transform: none;
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .image{
+    width: 80%;
+  }
+}
