@@ -110,7 +110,7 @@
 }
 
 .bgImg{
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   filter: saturate(1.05) contrast(1.03);
   opacity: 1;
