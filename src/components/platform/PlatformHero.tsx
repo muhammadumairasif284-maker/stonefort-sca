@@ -26,10 +26,7 @@ export default function PlatformHero() {
             </a>
           </div>
 
-          <div className={styles.meta}>
-            <span className={styles.dot} />
-            SCA-regulated UAE broker experience
-          </div>
+    
         </div>
 
         {/* RIGHT */}
