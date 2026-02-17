@@ -1,20 +1,40 @@
+"use client";
+
+import Image from "next/image";
 import styles from "./ContactChannels.module.css";
 
-const channels = [
+type Channel =
+  | {
+      title: string;
+      icon: string;
+      type: "email";
+      value: string;
+    }
+  | {
+      title: string;
+      icon: string;
+      type: "phone";
+      value: string;
+    };
+
+const channels: Channel[] = [
   {
     title: "Media Collaboration",
-    email: "marketing@stonefortsecurities.com",
-    icon: "media",
+    value: "marketing@stonefortsecurities.com",
+    icon: "/images/contact/collaboration.webp",
+    type: "email",
   },
   {
-    title: "Complaints",
-    email: "complaints@stonefortsecurities.com",
-    icon: "complaints",
+    title: "Support",
+    value: "support@stonefortsecurities.com",
+    icon: "/images/contact/support.webp",
+    type: "email",
   },
   {
-    title: "Career",
-    email: "careers@stonefortsecurities.com",
-    icon: "career",
+    title: "Contact",
+    value: "+971 4 123 4567",
+    icon: "/images/contact/contact.webp", // (use your headset icon image here)
+    type: "phone",
   },
 ];
 
@@ -31,20 +51,38 @@ export default function ContactChannels() {
         </div>
 
         <div className={styles.grid}>
-          {channels.map((item, index) => (
-            <div key={index} className={styles.card}>
-              <div className={`${styles.icon} ${styles[item.icon]}`} />
+          {channels.map((item) => {
+            const href =
+              item.type === "email"
+                ? `mailto:${item.value}`
+                : `tel:${item.value.replace(/\s+/g, "")}`;
 
-              <h3 className={styles.cardTitle}>{item.title}</h3>
+            const label =
+              item.type === "email"
+                ? `Email ${item.title}`
+                : `Call ${item.title}`;
 
-              <a
-                href={`mailto:${item.email}`}
-                className={styles.email}
-              >
-                {item.email}
-              </a>
-            </div>
-          ))}
+            return (
+              <article key={item.title} className={styles.card}>
+                <div className={styles.iconWrap} aria-hidden="true">
+                  <Image
+                    src={item.icon}
+                    alt=""
+                    width={96}
+                    height={96}
+                    className={styles.iconImg}
+                    priority={false}
+                  />
+                </div>
+
+                <h3 className={styles.cardTitle}>{item.title}</h3>
+
+                <a className={styles.value} href={href} aria-label={label}>
+                  {item.value}
+                </a>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
