@@ -12,13 +12,13 @@ const cards: Card[] = [
   {
     title: "User-Friendly Demo",
     desc: "Practice trading and get familiar with the platform in a risk-free environment.",
-    icon: { src: "/images/spreadmeta.webp", alt: "Demo trading icon" },
+    icon: { src: "/images/User-Friendly-Demo.webp", alt: "Demo trading icon" },
     cta: { label: "Try Demo", href: "/demo" },
   },
   {
     title: "Educational Resources",
     desc: "Access courses, webinars, quizzes, and videos to master essential trading concepts.",
-    icon: { src: "/images/leveragemeta.webp", alt: "Education and resources icon" },
+    icon: { src: "/images/Educational-Resources.webp", alt: "Education and resources icon" },
     cta: { label: "Learn More", href: "/education" },
   },
   {
@@ -29,12 +29,12 @@ const cards: Card[] = [
   {
     title: "Flexible Position Sizing",
     desc: "Adjust trade sizes to manage exposure according to your risk comfort.",
-    icon: { src: "/images/leveragemeta.webp", alt: "Position sizing icon" },
+    icon: { src: "/images/flexible-position.webp", alt: "Position sizing icon" },
   },
   {
     title: "Risk-Management Tools",
     desc: "Use tools like stop-loss orders to help control potential losses",
-    icon: { src: "/images/regulatedmeta.webp", alt: "Risk management icon" },
+    icon: { src: "/images/Risk-Management.webp", alt: "Risk management icon" },
   },
 ];
 
