@@ -5,7 +5,7 @@
   overflow: hidden;
 }
 
-/* premium fog + soft vignettes */
+/* 
 .hero::before{
   content:"";
   position:absolute;
@@ -16,13 +16,13 @@
     radial-gradient(1200px 760px at 50% 70%, rgba(0,0,0,.55), transparent 60%);
   filter: blur(10px);
   pointer-events:none;
-}
+} */
 
 .container{
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: 0.95fr 1.25fr;
   align-items: center;
   gap: 34px;
   position: relative;
@@ -125,7 +125,7 @@
   justify-content:flex-end;
 }
 
-.mediaFrame{
+/* .mediaFrame{
   position: relative;
   width: min(560px, 100%);
   aspect-ratio: 16 / 12;
@@ -135,7 +135,7 @@
   background: rgba(255,255,255,.04);
   border: 1px solid rgba(255,255,255,.10);
   box-shadow: 0 24px 80px rgba(0,0,0,.42);
-}
+} */
 
 .image{
   width: 100%;

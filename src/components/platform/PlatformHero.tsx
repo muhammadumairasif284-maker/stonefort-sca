@@ -33,7 +33,7 @@ export default function PlatformHero() {
         <div className={styles.right} aria-hidden="true">
           <div className={styles.mediaFrame}>
             <Image
-              src="/images/platform/notuse.webp"
+              src="/images/platform/herobanner.webp"
               alt=""
               width={920}
               height={720}

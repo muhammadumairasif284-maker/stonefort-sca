@@ -1,22 +1,20 @@
 .hero{
   position: relative;
   padding: 0px 0 34px;
-  background: var(--background);
+  background: #101711;
   overflow: hidden;
 }
 
 /* soft premium glows */
-.hero::before{
+/* .hero::before{
   content:"";
   position:absolute;
   inset: -200px -120px auto -120px;
   height: 520px;
-  /* background:
-    radial-gradient(closest-side, rgba(135,171,147,.28), transparent 65%),
-    radial-gradient(closest-side, rgba(77,110,85,.22), transparent 70%); */
+
   filter: blur(8px);
   pointer-events:none;
-}
+} */
 
 .container{
   width: min(1180px, calc(100% - 32px));

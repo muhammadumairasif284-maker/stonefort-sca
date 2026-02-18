@@ -117,8 +117,12 @@ export default function ReadyToTrade() {
                       </div>
                     </div>
 
+                    <span className={styles.cardRing} />
+                    
                     {/* glass sheen */}
                     <span className={styles.cardSheen} aria-hidden="true" />
+
+               
                   </article>
                 </div>
               );

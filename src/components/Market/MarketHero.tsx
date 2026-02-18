@@ -8,7 +8,7 @@ export default function MarketHero() {
       {/* Background image */}
       <div className={styles.bg} aria-hidden="true">
         <Image
-          src="/images/market/MarketHeroimg.webp"
+          src="/images/market/MarketHerobanner.webp"
           alt=""
           fill
           priority

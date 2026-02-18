@@ -1,21 +1,18 @@
+/* ReadyToTrade.module.css */
+
+/* ✅ Needed for conic gradient angle animation */
+@property --a{
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
 .section{
   padding: 96px 0 86px;
   position: relative;
   overflow: hidden;
   background:#101711;
 }
-
-/* .section::before{
-  content:"";
-  position:absolute;
-  inset:-220px;
-  background:
-    radial-gradient(900px 520px at 16% 18%, rgba(135,171,147,.14), transparent 60%),
-    radial-gradient(1100px 700px at 86% 30%, rgba(77,110,85,.18), transparent 62%),
-    radial-gradient(1200px 900px at 50% 92%, rgba(0,0,0,.72), transparent 60%);
-  filter: blur(12px);
-  pointer-events:none;
-} */
 
 .section::after{
   content:"";
@@ -32,9 +29,7 @@
   z-index: 1;
 }
 
-/* =======================
-   TOP
-======================= */
+/* TOP */
 .top{
   display:grid;
   grid-template-columns: 1.05fr .95fr;
@@ -42,15 +37,13 @@
   align-items: center;
 }
 
-.media{
-  position: relative;
-}
+.media{ position: relative; }
 
 .mediaGlow{
   position:absolute;
   right:-140px;
   top:-140px;
-  width: 420px;
+  width: 520px;
   height: 420px;
   border-radius: 999px;
   background: radial-gradient(closest-side, rgba(135,171,147,.18), transparent 70%);
@@ -71,12 +64,9 @@
   width: 100%;
   height: auto;
   display:block;
-  transform: translateZ(0);
 }
 
-.copy{
-  padding: 6px 0;
-}
+.copy{ padding: 6px 0; }
 
 .badge{
   display:inline-flex;
@@ -137,62 +127,19 @@
   filter: brightness(1.02);
 }
 
-/* =======================
-   STEPPER
-======================= */
+/* STEPPER */
 .stepper{
   margin-top: 34px;
   position: relative;
   padding: 28px 0 8px;
 }
-/* 
-.rail{
-  position:absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 2px;
-  pointer-events:none;
-}
-
-.railLine{
-  position:absolute;
-  inset: 0;
-  height: 2px;
-  border-radius: 999px;
-  background: linear-gradient(
-    90deg,
-    rgba(255,255,255,.0),
-    rgba(135,171,147,.22),
-    rgba(135,171,147,.50),
-    rgba(77,110,85,.30),
-    rgba(255,255,255,.0)
-  );
-  opacity: .8;
-}
-
-.railGlow{
-  position:absolute;
-  left: 50%;
-  top: 50%;
-  width: 520px;
-  height: 220px;
-  transform: translate(-50%, -50%);
-  border-radius: 999px;
-  background: radial-gradient(closest-side, rgba(135,171,147,.12), transparent 70%);
-  filter: blur(12px);
-  opacity: .9;
-} */
 
 .stepsGrid{
   display:grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
-  position: relative;
 }
 
-/* each column is a slot with node + card above/below rail */
 .stepSlot{
   position: relative;
   min-height: 360px;
@@ -201,66 +148,13 @@
 .slotTop .card{ position:absolute; left:0; right:0; top: 0; }
 .slotBottom .card{ position:absolute; left:0; right:0; bottom: 0; }
 
-/* =======================
-   NODE (no number)
-======================= */
-/* .node{
-  position:absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 34px;
-  height: 34px;
-  border-radius: 999px;
-  background: rgba(16,23,17,.62);
-  border: 1px solid rgba(255,255,255,.10);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index: 3;
-} */
-/* 
-.nodeGlow{
-  position:absolute;
-  inset:-18px;
-  border-radius: 999px;
-  background: radial-gradient(closest-side, rgba(135,171,147,.22), transparent 70%);
-  filter: blur(10px);
-  opacity: 0;
-  transition: opacity .22s ease;
-  pointer-events:none;
-} */
-
-/* .node::after{
-  content:"";
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.78);
-  opacity: .75;
-} */
-
-/* ONLY hovered node glows */
-.nodeHot{
-  border-color: rgba(135,171,147,.28);
-  box-shadow:
-    0 0 0 1px rgba(135,171,147,.10) inset,
-    0 18px 40px rgba(77,110,85,.20);
-}
-
-.nodeHot .nodeGlow{
-  opacity: 1;
-}
-
-/* =======================
-   CARD (glass + watermark)
-======================= */
+/* CARD */
 .card{
   position: relative;
   padding: 26px 24px;
   border-radius: 22px;
   overflow: hidden;
+  isolation: isolate;
 
   background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.025));
   border: 1px solid rgba(255,255,255,.10);
@@ -273,7 +167,7 @@
     inset 0 1px 0 rgba(255,255,255,.07);
 
   transition:
-    transform .25s ease,
+    transform .35s cubic-bezier(.22,.61,.36,1),
     border-color .25s ease,
     background .25s ease,
     box-shadow .25s ease;
@@ -292,9 +186,10 @@
   color: rgba(135,171,147,.10);
   z-index: 0;
   pointer-events: none;
+  transition: color .25s ease, text-shadow .25s ease;
 }
 
-/* soft glow behind watermark */
+/* subtle inner glow normal */
 .card::after{
   content:"";
   position:absolute;
@@ -308,13 +203,14 @@
   opacity: .35;
   z-index: 0;
   pointer-events:none;
+  transition: opacity .25s ease;
 }
 
-/* sheen */
+/* sheen normal */
 .cardSheen{
   position:absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
   pointer-events:none;
   background:
     radial-gradient(800px 260px at 30% 0%,
@@ -324,24 +220,20 @@
       rgba(135,171,147,.10),
       rgba(255,255,255,0) 62%);
   opacity: .75;
+  transition: opacity .25s ease;
 }
 
+/* content */
 .cardInner{
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
-/* 
-.cardContent{
-  padding-left: 16px;
-  border-left: 1px solid rgba(255,255,255,.08);
-} */
 
 .cardTitle{
   margin: 0 0 8px;
   font-size: 18px;
   font-weight: 850;
   color: #fff;
-  line-height: 1.15;
 }
 
 .cardDesc{
@@ -371,35 +263,67 @@
   font-size: 16px;
   transition: transform .18s ease;
 }
-
 .card:hover .arrow{ transform: translateX(4px); }
 
-/* ONLY hovered card glow */
+.card:hover .cardDesc {
+  color: #fff;
+}
+
+/*  MOVING BORDER RING (hidden by default) */
+.cardRing{
+  position:absolute;
+  inset: 0;
+  border-radius: 22px;
+  padding: 2px;
+  opacity: 0;
+  pointer-events:none;
+  z-index: 1;
+
+  background: conic-gradient(
+    from var(--a),
+    transparent 0 78%,
+    rgba(135,171,147,.95) 84%,
+    rgba(77,110,85,.95) 92%,
+    transparent 100%
+  );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+
+  transition: opacity .2s ease;
+}
+
+@keyframes ringSpin{
+  to{ --a: 360deg; }
+}
+
+/* ACTIVE */
 .cardActive{
   transform: translateY(-6px);
-  border-color: rgba(135,171,147,.40);
-  background: linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.03));
-  box-shadow:
-    0 34px 90px rgba(77,110,85,.22),
-    0 18px 60px rgba(0,0,0,.35),
-    inset 0 1px 0 rgba(255,255,255,.10);
+  background: #101711;
+  border-color: rgba(135,171,147,.45);
+  box-shadow: 0 24px 70px rgba(0,0,0,.45);
 }
+
+.cardActive::after{ opacity: 0; }          /* remove inner glow */
+.cardActive .cardSheen{ opacity: 0; }      /* remove sheen */
 
 .cardActive::before{
-  color: rgba(135,171,147,.20);
+  color: rgba(135,171,147,.22);
   text-shadow:
-    0 0 18px rgba(135,171,147,.25),
-    0 0 46px rgba(77,110,85,.22);
+    0 0 12px rgba(135,171,147,.35),
+    0 0 36px rgba(77,110,85,.28);
 }
 
-.cardActive::after{
-  opacity: .70;
-  background: radial-gradient(closest-side, rgba(135,171,147,.18), transparent 70%);
+.cardActive .cardRing{
+  opacity: 1;
+  animation: ringSpin 1.15s linear infinite;
 }
 
-/* =======================
-   Responsive
-======================= */
+/* Responsive */
 @media (max-width: 1040px){
   .stepsGrid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .stepSlot{ min-height: 380px; }
@@ -414,7 +338,10 @@
   .section{ padding: 78px 0 70px; }
   .stepsGrid{ grid-template-columns: 1fr; }
   .stepSlot{ min-height: auto; padding-top: 14px; }
-  .rail{ display:none; }
-  .node{ position: relative; left: auto; top: auto; transform: none; margin: 0 0 12px; }
   .slotTop .card, .slotBottom .card{ position: relative; top:auto; bottom:auto; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .cardRing{ animation: none !important; }
 }

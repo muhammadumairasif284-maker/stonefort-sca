@@ -1,3 +1,12 @@
+/* RiskFreeDemoCta.module.css */
+
+/* ✅ Needed so the custom angle variable animates properly in Chrome */
+@property --a{
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
 .section{
   --bg:#101711;
   --text:#eaf0f2;
@@ -32,7 +41,7 @@
   gap: 18px;
 }
 
-/* Soft glows */
+/* (Keep or remove) Soft glows on the whole banner */
 .banner::before{
   content:"";
   position:absolute;
@@ -44,6 +53,7 @@
   pointer-events:none;
 }
 
+/* Left */
 .left{
   position: relative;
   z-index: 1;
@@ -161,6 +171,7 @@
   gap: 12px;
 }
 
+/* ✅ PILLS */
 .pill{
   display: grid;
   grid-template-columns: 14px 1fr;
@@ -172,6 +183,71 @@
   background: rgba(255,255,255,.03);
   border: 1px solid rgba(255,255,255,.10);
   box-shadow: 0 14px 42px rgba(0,0,0,.35);
+
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    border-color .3s ease,
+    background .3s ease,
+    box-shadow .3s ease;
+}
+
+/* ✅ Moving glowing border ring (hidden by default) */
+.pill::before{
+  content:"";
+  position:absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 2px;               /* ring thickness */
+  opacity: 0;
+  pointer-events:none;
+  z-index: 0;
+
+  /* Conic gradient provides the moving highlight */
+  background: conic-gradient(
+    from var(--a),
+    transparent 0 78%,
+    rgba(135,171,147,.95) 84%,
+    rgba(77,110,85,.95) 92%,
+    transparent 100%
+  );
+
+  /* Show ONLY border ring (no inside fill) */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+/* Content stays above ring */
+.pill > *{
+  position: relative;
+  z-index: 1;
+}
+
+/*  Trigger on MAIN container hover */
+.banner:hover .pill{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.04);
+  border-color: rgba(135,171,147,.22);
+  box-shadow: 0 18px 55px rgba(0,0,0,.45);
+}
+
+.banner:hover .pill::before{
+  opacity: 1;
+  animation: ringSpin 1.1s linear infinite;
+}
+
+/*  Stagger so both rings don’t look identical */
+.banner:hover .stack .pill:nth-of-type(1)::before{ animation-delay: 0ms; }
+.banner:hover .stack .pill:nth-of-type(2)::before{ animation-delay: -550ms; }
+
+@keyframes ringSpin{
+  to{ --a: 360deg; }
 }
 
 .pillDot{
@@ -239,4 +315,14 @@
   height: 1px;
   background: rgba(255,255,255,.08);
   margin-top: 22px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .banner:hover .pill{
+    transform: none !important;
+  }
+  .banner:hover .pill::before{
+    animation: none !important;
+  }
 }

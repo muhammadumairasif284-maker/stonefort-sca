@@ -111,7 +111,7 @@
 
 .bgImg{
   object-fit: contain;
-  object-position: center;
+  object-position: right center; 
   filter: saturate(1.05) contrast(1.03);
   opacity: 1;
 }

@@ -15,8 +15,8 @@
   overflow: hidden;
 }
 
-/* Soft glow behind whole section (same spirit as your reference) */
-.section::before{
+/* Soft glow behind whole section */
+/* .section::before{
   content:"";
   position:absolute;
   left: 50%;
@@ -33,7 +33,7 @@
     );
   filter: blur(22px);
   pointer-events: none;
-}
+} */
 
 .inner{
   max-width: 1180px;
@@ -85,7 +85,7 @@
   gap: 14px;
 }
 
-/* Card (consistent background across all cards) */
+/* Card (updated hover to match ExecutionOutcomes lift + glow) */
 .card{
   grid-column: span 12;
   position: relative;
@@ -93,13 +93,29 @@
   padding: 18px 18px 16px;
   overflow: hidden;
 
-  background: rgba(255,255,255,.02);      /* ✅ same on every card */
-  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(135,171,147,.15);
   box-shadow: 0 18px 60px rgba(0,0,0,.45);
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    border-color .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
 }
 
-/* Soft internal glow (same for every card => no “different bg” illusion) */
-.card::before{
+.card:hover{
+  transform: translateY(-6px);
+  /* background: rgba(255,255,255,.05); */
+  border-color: #4D6E55;
+  box-shadow:
+    0 22px 70px rgba(77,110,85,.30),
+    0 0 0 1px rgba(77,110,85,.25);
+}
+
+/* Soft internal glow (same for every card) */
+/* .card::before{
   content:"";
   position:absolute;
   inset:-2px;
@@ -113,8 +129,14 @@
       transparent 62%);
   pointer-events:none;
   opacity:.9;
+} */
+
+/* Optional: slightly intensify glow on hover (premium feel) */
+.card:hover::before{
+  opacity: 1;
 }
 
+/* Content blocks */
 .iconWrap{
   position: relative;
   width: 78px;
@@ -125,6 +147,17 @@
   background: rgba(255,255,255,.04);
   border: 1px solid rgba(255,255,255,.10);
   margin-bottom: 12px;
+
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    border-color .3s ease,
+    background .3s ease;
+}
+
+.card:hover .iconWrap{
+  transform: translateY(-2px);
+  border-color: rgba(135,171,147,.22);
+  background: rgba(255,255,255,.06);
 }
 
 .icon{
@@ -160,7 +193,7 @@
   height: 38px;
 }
 
-/* CTA link button (dark theme) */
+/* CTA link button (updated hover to match lift + green edge) */
 .linkBtn{
   display: inline-flex;
   align-items: center;
@@ -174,13 +207,19 @@
 
   background: rgba(77,110,85,.22);
   border: 1px solid rgba(135,171,147,.30);
-  transition: transform .18s ease, background .18s ease, border-color .18s ease;
+
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    background .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
 }
 
 .linkBtn:hover{
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   background: rgba(77,110,85,.30);
   border-color: rgba(135,171,147,.45);
+  box-shadow: 0 14px 38px rgba(77,110,85,.22);
 }
 
 .arrow{
@@ -207,23 +246,39 @@
   font-weight: 800;
   text-decoration: none;
   border: 1px solid rgba(0,0,0,.35);
-  box-shadow: 0 18px 50px rgba(77, 110, 85, 0.26);
-  transition: transform .18s ease, filter .18s ease;
+  box-shadow: 0 18px 50px rgba(77,110,85,.26);
+
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    filter .2s ease,
+    box-shadow .3s ease;
 }
 
 .primaryBtn:hover{
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   filter: brightness(1.06);
+  box-shadow: 0 22px 70px rgba(77,110,85,.30);
 }
 
 /* Responsive columns */
 @media (min-width: 640px){
   .card{ grid-column: span 6; }
 }
+
 @media (min-width: 1024px){
   .card{ grid-column: span 4; }
   .grid > .card:nth-child(4),
   .grid > .card:nth-child(5){
     grid-column: span 6;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .card, .iconWrap, .linkBtn, .primaryBtn{
+    transition: none !important;
+  }
+  .card:hover, .linkBtn:hover, .primaryBtn:hover{
+    transform: none !important;
   }
 }

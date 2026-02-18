@@ -32,7 +32,7 @@ const channels: Channel[] = [
   },
   {
     title: "Contact",
-    value: "+971 4 123 4567",
+    value: "+971-4-564 6888",
     icon: "/images/contact/contact.webp", // (use your headset icon image here)
     type: "phone",
   },
