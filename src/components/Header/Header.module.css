@@ -269,7 +269,7 @@
 
   padding: 16px;
 
-  overflow: hidden; /* ✅ no scroll inside drawer */
+  overflow: hidden; 
 }
 
 .drawerOpen .drawer{ transform: translateX(0); }

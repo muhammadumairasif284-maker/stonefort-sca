@@ -1,6 +1,6 @@
 .section{
   position: relative;
-  padding: 92px 0 110px;
+  padding: 56px 0px;
   overflow: hidden;
   background: #101711;
 }
@@ -59,7 +59,7 @@
   margin: 0 auto;
   max-width: 720px;
   color: rgba(210,220,214,.70);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.9;
 }
 
@@ -279,7 +279,7 @@
 .desc{
   margin: 0;
   max-width: 58ch;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.9;
   color: rgba(210,220,214,.62);
 }

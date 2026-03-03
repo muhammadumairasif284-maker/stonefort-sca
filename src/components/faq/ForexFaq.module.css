@@ -37,11 +37,14 @@
 }
 
 .header h2{
-  font-size: var(--section-title-size);
-  line-height: 1.12;
-  color:#fff;
-  margin-bottom:10px;
-  font-weight: 900;
+ margin: 14px 0 10px;
+  color: rgba(255,255,255,.92);
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 1.05;
+  letter-spacing: .02em;
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  text-shadow: 0 18px 60px rgba(0,0,0,.55);
 }
 
 .header p{

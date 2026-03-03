@@ -1,23 +1,19 @@
+/* =========================================================
+   UPDATED — MATCHES STONEFORT MASTER STYLE SPEC
+   (DO NOT TOUCH :root TOKENS)
+========================================================= */
+
 .section{
-  padding: 96px 0;
+  padding:56px 16px;
   position: relative;
   overflow: hidden;
+  background: var(--background);
 }
 
-/* subtle premium glow */
-.section::before{
-  content:"";
-  position:absolute;
-  width: 720px;
-  height: 720px;
-  left: 50%;
-  top: -360px;
-  transform: translateX(-50%);
-  background: radial-gradient(closest-side, rgba(135,171,147,.20), transparent 70%);
-  filter: blur(22px);
-  pointer-events:none;
-}
+/* Premium Stonefort Glow */
 
+
+/* Container */
 .container{
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
@@ -26,61 +22,96 @@
   text-align: center;
 }
 
+/* Section Title (Spec) */
 .title{
-  margin: 0 0 46px;
-  font-size: 32px;
-  font-weight: 850;
-  color: #fff;
-  line-height: 1.2;
+  margin: 0 0 10px;
+  color: rgba(255,255,255,.92);
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 1.05;
+  letter-spacing: .02em;
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  text-shadow: 0 18px 60px rgba(0,0,0,.55);
+  padding-bottom: 30px;
 }
 
-/* 3 cards */
+/* 3 Card Grid */
 .grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: 24px;
 }
 
+/* Card System (Global Spec Style) */
 .card{
-  padding: 30px 26px;
-  border-radius: 22px;
-  background: rgba(255,255,255,.03);
-  border: 1px solid rgba(255,255,255,.08);
-  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+  padding: 28px 24px;
+  border-radius: 18px;
+
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(135,171,147,.15);
+  box-shadow: 0 18px 60px rgba(0,0,0,.45);
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+
   backdrop-filter: blur(6px);
+
+  transition:
+    transform .4s cubic-bezier(.22,.61,.36,1),
+    border-color .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
 }
 
 .card:hover{
-  transform: translateY(-6px);
-  border-color: rgba(135,171,147,.40);
-  box-shadow: 0 30px 80px rgba(77,110,85,.22);
+  transform: translateY(-4px);
+  border-color: var(--sfs-green-main);
+  box-shadow:
+    0 22px 70px rgba(77,110,85,.30),
+    0 0 0 1px rgba(77,110,85,.25);
 }
 
+/* Icon Block (Stonefort System — NOT circular bubble) */
 .icon{
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto 18px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 24px;
-  color: #fff;
-  background: radial-gradient(circle, rgba(135,171,147,.35), rgba(77,110,85,.22));
-  box-shadow: 0 14px 44px rgba(77,110,85,.22);
+
+  display:grid;
+  place-items:center;
+
+  border-radius:16px;
+  background: rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow: 0 14px 30px rgba(0,0,0,.35);
 }
 
+/* If using image inside */
+.icon img,
+.icon :global(img){
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 30px rgba(0,0,0,.35));
+}
+
+/* Card Title (Spec Typography) */
 .h3{
   margin: 0 0 10px;
-  font-size: 18px;
-  font-weight: 800;
-  color: #fff;
+  font-size: var(--card-title-size);
+  line-height: var(--card-title-lh);
+  font-weight: 900;
+  color: var(--foreground);
 }
 
+/* Card Description (Spec Typography) */
 .p{
   margin: 0;
-  font-size: 14px;
-  line-height: 1.85;
-  color: var(--sfs-grey);
+  font-size: var(--card-desc-size);
+  line-height: var(--card-desc-lh);
+  color: rgba(234,240,242,.75);
 }
 
 /* Responsive */
@@ -88,8 +119,14 @@
   .grid{
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 600px){
+  .section{
+    padding:40px 16px;
+  }
+
   .title{
-    font-size: 26px;
-    margin-bottom: 34px;
+    margin-bottom: 28px;
   }
 }

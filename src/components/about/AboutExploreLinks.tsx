@@ -41,7 +41,7 @@ export default function AboutExploreLinks() {
         <header className={styles.head}>
           <h2 className={styles.h2}>Explore More</h2>
           <p className={styles.sub}>
-            Quick access to updates, account options and campaigns — designed to keep you informed and ready.
+            Quick access to updates, account options and campaigns - designed to keep you informed and ready.
           </p>
         </header>
 

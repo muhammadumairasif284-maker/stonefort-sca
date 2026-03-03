@@ -5,26 +5,32 @@ import Link from "next/link";
 import { useState } from "react";
 import styles from "./ReadyToTrade.module.css";
 
+/**
+ * 3-step version (content preserved from your 4 steps)
+ * - Step 1 = Register + Answer (same text, merged)
+ * - Step 2 = Verify (same text)
+ * - Step 3 = Fund (same text)
+ */
 const STEPS = [
   {
     num: "1",
     title: "Register",
-    text: "Sign up with your email and instantly access a free demo account.",
+    text:
+      "Sign up with your email and instantly access a free demo account." ,
+      
+    total: 3,
   },
   {
     num: "2",
-    title: "Answer",
-    text: "Complete a quick suitability check so we can ensure our products are right for you.",
+    title: "Verify",
+    text: "Secure your account with a simple verification process. Your safety always comes first.",
+    total: 3,
   },
   {
     num: "3",
-    title: "Verify",
-    text: "Secure your account with a simple verification process. Your safety always comes first.",
-  },
-  {
-    num: "4",
     title: "Fund",
     text: "All set. Add funds and start trading global markets with confidence.",
+    total: 3,
   },
 ];
 
@@ -81,7 +87,8 @@ export default function ReadyToTrade() {
 
           <div className={styles.stepsGrid}>
             {STEPS.map((s, i) => {
-              const isTop = i % 2 === 0; // 1,3 top — 2,4 bottom
+              // With 3 cards: 1 & 3 top, 2 bottom (keeps your zig-zag feel)
+              const isTop = i !== 1;
               const isActive = active === i;
 
               return (
@@ -106,10 +113,14 @@ export default function ReadyToTrade() {
                     <div className={styles.cardInner}>
                       <div className={styles.cardContent}>
                         <h3 className={styles.cardTitle}>{s.title}</h3>
-                        <p className={styles.cardDesc}>{s.text}</p>
+
+                        {/* preserve your merged text newlines */}
+                        <p className={styles.cardDesc} style={{ whiteSpace: "pre-line" }}>
+                          {s.text}
+                        </p>
 
                         <div className={styles.cardFoot}>
-                          <span className={styles.hint}>Step {s.num} of 4</span>
+                          <span className={styles.hint}>Step {s.num} of {s.total}</span>
                           <span className={styles.arrow} aria-hidden="true">
                             →
                           </span>
@@ -118,11 +129,7 @@ export default function ReadyToTrade() {
                     </div>
 
                     <span className={styles.cardRing} />
-                    
-                    {/* glass sheen */}
                     <span className={styles.cardSheen} aria-hidden="true" />
-
-               
                   </article>
                 </div>
               );

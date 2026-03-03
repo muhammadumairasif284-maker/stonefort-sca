@@ -11,7 +11,7 @@
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.45fr 0.80fr;
   align-items: center;
   gap: 28px;
   position: relative;
@@ -43,11 +43,14 @@
 }
 
 .h1{
-  font-size: clamp(30px, 4.2vw, 52px);
+  margin: 14px 0 10px;
+  color: rgba(255,255,255,.92);
+  font-weight: 500;
+  font-size: 54px;
   line-height: 1.05;
-  letter-spacing: -0.6px;
-  margin: 0 0 14px;
-  font-weight: 900;
+  letter-spacing: .02em;
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  text-shadow: 0 18px 60px rgba(0,0,0,.55);
 
 }
 
@@ -172,6 +175,17 @@
   .hero{
     padding: 34px 0 22px;
   }
+  .h1{
+
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: .02em;
+}
+.lead {
+  font-size: 14px;
+}
+
   .primaryBtn,
   .secondaryBtn{
     width: 100%;

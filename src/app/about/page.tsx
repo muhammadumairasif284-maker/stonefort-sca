@@ -28,7 +28,6 @@ export default function AboutPage() {
       <AboutExploreLinks />
       <AboutMoneyProtected />
       <GetStartedCTA />
-
     </>
   );
 }

@@ -92,11 +92,14 @@
 
 /* Title / Desc use global section tokens */
 .title{
-  margin: 14px 0 12px;
-  font-size: var(--section-title-size);
-  font-weight: 900;
-  color: var(--foreground);
-  line-height: 1.08;
+ margin: 14px 0 10px;
+  color: rgba(255,255,255,.92);
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 1.05;
+  letter-spacing: .02em;
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+  text-shadow: 0 18px 60px rgba(0,0,0,.55);
 }
 
 .desc{
@@ -169,13 +172,14 @@
 
 .stepsGrid{
   display:grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 
+/* Optional: slightly reduce height because 3 cards feel taller otherwise */
 .stepSlot{
   position: relative;
-  min-height: 360px;
+  min-height: 340px;
 }
 
 .slotTop .card{ position:absolute; left:0; right:0; top: 0; }
@@ -356,12 +360,11 @@
   animation: ringSpin 1.15s linear infinite;
 }
 
-/* Responsive */
+/* Responsive stays same (2 cols then 1 col) */
 @media (max-width: 1040px){
   .stepsGrid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .stepSlot{ min-height: 380px; }
 }
-
 @media (max-width: 640px){
   .stepsGrid{ grid-template-columns: 1fr; }
   .stepSlot{ min-height: auto; padding-top: 14px; }

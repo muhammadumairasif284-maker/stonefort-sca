@@ -12,37 +12,37 @@ type Feature = {
 
 const FEATURES: Feature[] = [
   {
-    icon: "/images/market/fxmarket.webp",
+    icon: "/images/market/forex-2.webp",
     title: "Forex",
     desc: "Major, minor and exotics with deep liquidity and fast execution.",
     chips: ["EUR/USD", "GBP/USD", "USD/JPY"],
   },
   {
-    icon: "/images/market/metalsmarket.webp",
+    icon: "/images/market/Metalsilver.webp",
     title: "Metals",
     desc: "Trade key metals with flexible sizing and transparent pricing.",
     chips: ["XAU/USD", "XAG/USD", "Platinum"],
   },
   {
-    icon: "/images/market/indicesmarket.webp",
+    icon: "/images/market/market-indices.webp",
     title: "Indices",
     desc: "Access global indices to express macro views efficiently.",
     chips: ["US100", "SPX500", "GER40"],
   },
   {
-    icon: "/images/market/commoditiesmarket.webp",
+    icon: "/images/market/marketcommodities.webp",
     title: "Commodities",
     desc: "Energy and soft commodities with dynamic market opportunities.",
     chips: ["WTI", "Brent", "Natural Gas"],
   },
   {
-    icon: "/images/market/cryptocfdmarket.webp",
+    icon: "/images/market/marketcryptocfd-1.webp",
     title: "Crypto CFDs",
     desc: "Trade popular crypto markets with risk controls and alerts.",
     chips: ["BTC/USD", "ETH/USD", "SOL/USD"],
   },
   {
-    icon: "/images/market/Sharesmarket.webp",
+    icon: "/images/market/Shares-CFDs.webp",
     title: "Shares (CFDs)",
     desc: "Go long or short on selected global shares with margin trading.",
     chips: ["Top US", "Top EU", "Top Asia"],

@@ -42,7 +42,7 @@ export default function ForexFaq() {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2>Forex FAQs – Understand the Markets Better</h2>
+          <h2>Forex FAQs -   Understand the Markets Better</h2>
           <p>
             Everything you need to know about Forex trading, margin, and how to
             access global currency markets securely.

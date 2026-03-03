@@ -70,8 +70,8 @@ export default function AccountsPlans() {
                 </div>
 
                 <div className={styles.tierWrap}>
-                  <h3 className={styles.tier}>{p.tier}</h3>
-                  <p className={styles.tierSub}>Accounts</p>
+                  {/* <h3 className={styles.tier}>{p.tier}</h3> */}
+                  {/* <p className={styles.tierSub}>Accounts</p> */}
                 </div>
               </div>
 

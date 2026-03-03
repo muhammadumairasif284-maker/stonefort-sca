@@ -38,7 +38,7 @@ export default function ContactHero() {
 
                 <span className={styles.chip} role="listitem">
                   <span className={styles.shield} aria-hidden="true" />
-                  SCA Regulated
+                  CMA Regulated
                 </span>
 
                 <span className={styles.chip} role="listitem">
