@@ -1,5 +1,5 @@
 .section{
-  padding: 56px 0 20px;
+  padding: 56px 0 ;
   background: var(--background);
   position: relative;
   overflow: hidden;
@@ -163,6 +163,9 @@
   }
   .grid{
     grid-template-columns: 1fr;
+  }
+  .title {
+    font-size: 32px;
   }
 }
 
