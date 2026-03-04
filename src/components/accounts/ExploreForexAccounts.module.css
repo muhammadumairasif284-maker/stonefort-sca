@@ -416,6 +416,9 @@
     flex-direction: column;
     align-items: flex-start;
   }
+  .title{
+  font-size: 32px;
+  }
 }
 
 /* Mobile full width buttons (Master rule) */

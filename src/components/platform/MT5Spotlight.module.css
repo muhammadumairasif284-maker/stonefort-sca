@@ -258,4 +258,6 @@
 @media (max-width: 520px){
   .row{ grid-template-columns: 52px 1fr; }
   .num{ width: 42px; height: 42px; }
+  .title{ font-size: 32px;}
+  .h3 {font-size: 32px;}
 }

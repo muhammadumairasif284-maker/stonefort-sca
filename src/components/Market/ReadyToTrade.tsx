@@ -46,7 +46,7 @@ export default function ReadyToTrade() {
             <div className={styles.mediaGlow} aria-hidden="true" />
             <div className={styles.mediaFrame}>
               <Image
-                src="/images/market/registerimg.webp"
+                src="/images/market/platformregisterimg.webp"
                 alt="Stonefort account opening"
                 width={980}
                 height={720}
@@ -62,7 +62,7 @@ export default function ReadyToTrade() {
             </div>
 
             <h2 className={styles.title} data-aos="fade-up" data-aos-delay="70">
-              Ready to trade smarter?
+              Ready to <span>trade smarter?</span>
             </h2>
 
             <p className={styles.desc} data-aos="fade-up" data-aos-delay="140">

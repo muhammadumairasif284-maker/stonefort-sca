@@ -120,6 +120,10 @@
   font-weight: 720;
 }
 
+
+.title span{
+  color: var(--sfs-mint);
+}
 .badge{
   font-size: 12px;
   padding: 6px 10px;
@@ -184,5 +188,8 @@
    .section{
   padding: 30px 16px 30px !important;
 
+}
+.title{
+  font-size: 32px;
 }
 }

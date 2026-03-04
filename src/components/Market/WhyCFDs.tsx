@@ -37,7 +37,7 @@ export default function WhyCFDs() {
             </div>
 
             <h2 className={styles.title} data-aos="fade-up" data-aos-delay="70">
-              Why trade global markets using CFDs?
+              Why trade <span>global markets</span> using CFDs?
             </h2>
 
             <p className={styles.lead} data-aos="fade-up" data-aos-delay="140">

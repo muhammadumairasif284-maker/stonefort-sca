@@ -58,10 +58,10 @@ export default function MarketFeatures() {
             Markets
           </div>
           <h2 className={styles.title} data-aos="fade-up" data-aos-delay="80">
-            What you can trade
+            What you can <span>trade</span>
           </h2>
           <p className={styles.desc} data-aos="fade-up" data-aos-delay="140">
-            Choose from multiple CFD markets designed for different strategies — from short-term
+            Choose from multiple CFD markets designed for different strategies - from short-term
             trading to diversified exposure.
           </p>
         </header>

@@ -168,4 +168,7 @@
   .section{
     padding: 40px 16px;
   }
+  .header h2{ 
+    font-size: 32px;
+  }
 }

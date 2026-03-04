@@ -116,7 +116,7 @@
 .cardTitle{
   font-size: var(--card-title-size);
   line-height: var(--card-title-lh);
-  font-weight: 900; /* spec range 800-950 */
+  font-weight: 700; /* spec range 800-950 */
   color: var(--foreground);
   margin: 0 0 8px;
 }
@@ -170,6 +170,6 @@
 
 @media (max-width:640px){
   .title{
-    /* keep token, no hard size needed */
+    font-size: 32px;
   }
 }

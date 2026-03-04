@@ -65,6 +65,9 @@
   text-shadow: 0 18px 60px rgba(0,0,0,.55);
 }
 
+.title span{
+  color: var(--sfs-mint);
+}
 .desc {
   font-size: 16px;
   color: var(--sfs-grey);
@@ -267,4 +270,7 @@
   .ctaRow {
     justify-content:center;
 }  
+.title {
+  font-size: 32px;
+}
 }

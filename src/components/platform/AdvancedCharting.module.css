@@ -210,4 +210,7 @@
   .outlineBtn{
     width:100%;
   }
+  .title{ 
+    font-size: 32px;
+  }
 }

@@ -6,7 +6,7 @@ export default function CFDMarketsPro() {
     <section className={styles.section} aria-label="Our CFD markets">
       <div className={styles.inner}>
         <div className={styles.head}>
-          <h2 className={styles.title}>Our Markets at a Glance</h2>
+          <h2 className={styles.title}><span>Our Markets</span> at a Glance</h2>
           <p className={styles.desc}>
             Step into global opportunities with access to hundreds of instruments across Forex, Indices, Commodities, Cryptocurrencies, and Shares. Trade with transparent pricing, competitive spreads, and a platform engineered for active, performance-driven traders.
           </p>

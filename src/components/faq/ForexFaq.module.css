@@ -145,6 +145,7 @@
 @media (max-width:768px){
   .header{
     margin-bottom: 22px;
+    
   }
 
   .question{
@@ -168,5 +169,8 @@
 @media (max-width:640px){
   .section{
     padding: 40px 16px;
+  }
+  .header h2{
+    font-size: 32px;
   }
 }

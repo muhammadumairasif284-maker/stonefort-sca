@@ -10,30 +10,12 @@
 
   background: var(--background);
   color: var(--text);
-  padding: 56px 16px 20px;
+  padding: 56px 0 20px;
   position: relative;
   overflow: hidden;
 }
 
-/* Soft glow behind whole section */
-/* .section::before{
-  content:"";
-  position:absolute;
-  left: 50%;
-  top: 50%;
-  width: 1200px;
-  height: 420px;
-  transform: translate(-50%, -50%);
-  background:
-    radial-gradient(
-      closest-side,
-      rgba(135,171,147,.22),
-      rgba(77,110,85,.12) 45%,
-      transparent 70%
-    );
-  filter: blur(22px);
-  pointer-events: none;
-} */
+
 
 .inner{
   max-width: 1180px;
@@ -274,7 +256,7 @@
 }
 @media  (max-width:600px) {
     .section {
-      padding: 30px 16px;
+      padding: 56px 16px 30px;
     }  
     .title {
       font-size: 32px;

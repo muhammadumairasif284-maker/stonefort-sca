@@ -19,7 +19,7 @@ export default function HeroAccounts() {
           <span className={styles.tag}>ACCOUNT TYPES</span>
 
           <h1 className={styles.title}>
-           One Account. Total Market Access. 
+           One Account. Total <span>Market Access.</span> 
           </h1>
 
           <p className={styles.desc}>

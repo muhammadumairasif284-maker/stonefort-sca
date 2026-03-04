@@ -157,4 +157,7 @@
 
 @media (max-width: 620px){
   .grid{ grid-template-columns: 1fr; }
+  .title{ 
+    font-size: 32px;
+  }
 }

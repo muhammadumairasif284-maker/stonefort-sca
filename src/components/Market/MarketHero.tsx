@@ -26,7 +26,7 @@ export default function MarketHero() {
             <div className={styles.kicker}>Markets</div>
 
             <h1 className={styles.title}>
-              Trade where the world moves.
+              <span>Trade</span> where the world moves.
             </h1>
 
             <p className={styles.desc}>

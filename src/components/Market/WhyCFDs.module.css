@@ -13,7 +13,7 @@
 
 @media (max-width: 600px){
   .section{
-    padding: 40px 16px;             
+    padding: 40px 16px 0;             
   }
 }
 
@@ -70,7 +70,9 @@
   font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
   text-shadow: 0 18px 60px rgba(0,0,0,.55);
 }
-
+.title span{
+  color: var(--sfs-mint);
+}
 /*  use spec section sub token */
 .lead{
   margin: 0;
@@ -324,4 +326,10 @@
   .layout{ grid-template-columns: 1fr; }
   .right{ grid-template-columns: 1fr; }
   .title{ max-width: none; }
+}
+@media (max-width: 640px){
+
+  .title{ 
+    font-size: 32px;
+   }
 }
