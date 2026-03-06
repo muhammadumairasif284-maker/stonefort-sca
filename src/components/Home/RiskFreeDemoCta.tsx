@@ -14,7 +14,7 @@ export default function RiskFreeDemoCta() {
             </p>
 
             <div className={styles.actions}>
-              <a className={styles.primaryBtn} href="/demo">
+              <a className={styles.primaryBtn} href="https://stonefortsecurities.com/registration/">
                 Open Demo Account <span className={styles.arrow} aria-hidden="true">→</span>
               </a>
               {/* <a className={styles.ghostBtn} href="/platforms">

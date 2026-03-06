@@ -71,7 +71,7 @@ export default function ReadyToTrade() {
             </p>
 
             <div className={styles.actions} data-aos="fade-up" data-aos-delay="210">
-              <Link href="/accounts" className={styles.btn}>
+              <Link href="https://stonefortsecurities.com/registration/" className={styles.btn}>
                 Open Your Account
               </Link>
             </div>
@@ -121,9 +121,9 @@ export default function ReadyToTrade() {
 
                         <div className={styles.cardFoot}>
                           <span className={styles.hint}>Step {s.num} of {s.total}</span>
-                          <span className={styles.arrow} aria-hidden="true">
+                          {/* <span className={styles.arrow} aria-hidden="true">
                             →
-                          </span>
+                          </span> */}
                         </div>
                       </div>
                     </div>

@@ -13,7 +13,7 @@ export default function GetStartedCTA() {
           </div>
 
           <div className={styles.actions}>
-            <a className={styles.btn} href="/signup">
+            <a className={styles.btn} href="https://stonefortsecurities.com/registration/">
               Trade Now <span className={styles.arrow} aria-hidden="true">→</span>
             </a>
           </div>

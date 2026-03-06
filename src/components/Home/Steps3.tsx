@@ -14,21 +14,21 @@ const STEPS: Step[] = [
     title: "Create Account",
     text: "Sign up and complete verification in just a few minutes.",
     ctaLabel: "Open Account",
-    href: "/signup",
+    href: "https://stonefortsecurities.com/registration/",
   },
   {
     n: "02",
     title: "Fund Your Account",
     text: "Add funds securely using our approved deposit methods.",
     ctaLabel: "Deposit",
-    href: "/deposit",
+    href: "https://stonefortsecurities.com/registration/",
   },
   {
     n: "03",
     title: "Start Trading",
     text: "Access over 1,500 trading instruments with real-time market pricing.",
     ctaLabel: "Trade Now",
-    href: "/platform",
+    href: "https://stonefortsecurities.com/registration/",
   },
 ];
 

@@ -42,7 +42,7 @@ export default function AboutExploreMarkets() {
       aria-label="Explore Opportunities in Global Markets"
     >
       <div className={styles.container}>
-        <h2 className={styles.title}>Explore Opportunities in Global Markets</h2>
+        <h2 className={styles.title}>Explore Opportunities in <span>Global Markets</span></h2>
 
         <p className={styles.lead}>
           As a regulated introducing broker under the Stonefort group, we provide
@@ -73,7 +73,7 @@ export default function AboutExploreMarkets() {
         </div>
 
         <div className={styles.ctaWrap}>
-          <Link href="/accounts" className={styles.cta}>
+          <Link href="https://stonefortsecurities.com/registration/" className={styles.cta}>
             Trade Now
           </Link>
         </div>

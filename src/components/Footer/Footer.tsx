@@ -5,7 +5,7 @@ import styles from "./Footer.module.css";
 
 const menu = [
   { href: "/", label: "Home" },
-  { href: "/market", label: "Market" },
+  { href: "/Market", label: "Market" },
   { href: "/accounts", label: "Accounts" },
   { href: "/platform", label: "Platform" },
   { href: "/about", label: "About Us" },
@@ -13,11 +13,11 @@ const menu = [
 ];
 
 const socials = [
-  { href: "https://www.facebook.com/", label: "Facebook", icon: "fb" },
-  { href: "https://www.instagram.com/", label: "Instagram", icon: "ig" },
-  { href: "https://www.linkedin.com/", label: "LinkedIn", icon: "in" },
-  { href: "https://x.com/", label: "X", icon: "x" },
-  { href: "https://www.youtube.com/", label: "YouTube", icon: "yt" },
+  { href: "https://www.facebook.com/people/Stonefort-Securities/61576805064272/?mibextid=wwXIfr&rdid=OLRs6M27PoIBo4as&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16QwwioCGv%2F%3Fmibextid%3DwwXIfr", label: "Facebook", icon: "fb" },
+  { href: "https://www.instagram.com/stonefortsecurities/", label: "Instagram", icon: "ig" },
+  { href: "https://www.linkedin.com/company/stonefort-securities/", label: "LinkedIn", icon: "in" },
+  { href: "https://x.com/Sfsecurities", label: "X", icon: "x" },
+  { href: "https://www.youtube.com/@SFsecurities", label: "YouTube", icon: "yt" },
 ];
 
 export default function Footer() {

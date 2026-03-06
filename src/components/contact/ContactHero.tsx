@@ -16,7 +16,7 @@ export default function ContactHero() {
               CONTACT STONEFORT
             </div>
 
-            <h1 className={styles.h1}>Get in Touch with Stonefort 
+            <h1 className={styles.h1}>Get in Touch with <span>Stonefort </span>
 </h1>
 
             <p className={styles.lead}>

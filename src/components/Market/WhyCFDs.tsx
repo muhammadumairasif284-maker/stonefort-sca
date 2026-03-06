@@ -100,7 +100,7 @@ export default function WhyCFDs() {
                       </span>
                     ))}
                   </div>
-                  <span className={styles.arrow} aria-hidden="true" />
+                  {/* <span className={styles.arrow} aria-hidden="true" /> */}
                 </div>
 
                 {/* decorative */}

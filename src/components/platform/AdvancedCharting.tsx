@@ -56,10 +56,10 @@ export default function AdvancedCharting() {
           </p>
 
           <div className={styles.buttons}>
-            <a href="/platform" className={styles.outlineBtn}>
+            <a href="/about" className={styles.outlineBtn}>
               Discover More
             </a>
-            <a href="/accounts" className={styles.primaryBtn}>
+            <a href="https://stonefortsecurities.com/registration/" className={styles.primaryBtn}>
               Get Started
             </a>
           </div>

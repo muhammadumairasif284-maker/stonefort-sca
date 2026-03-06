@@ -20,7 +20,7 @@ const platforms: Platform[] = [
       "Real-time account insights – Monitor trading activity and performance. ",
       "Multi-device access – Trade seamlessly on mobile, web, and desktop. ",
     ],
-    cta: { label: "Explore Stonefortrader", href: "/platforms/stoneforttrader" },
+    cta: { label: "Explore Stonefortrader", href: "/platform" },
   },
     {
     badge: "MetaTrader",
@@ -31,7 +31,7 @@ const platforms: Platform[] = [
       "Enhanced order types – Greater trade management options. ",
       "More timeframes and charts – Flexible market analysis. ",
     ],
-    cta: { label: "Explore MT5", href: "/platforms/mt5" },
+    cta: { label: "Explore MT5", href: "/platform" },
   },
 ];
 

@@ -86,6 +86,9 @@
   font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
   text-shadow: 0 18px 60px rgba(0,0,0,.55);
 }
+.h1 span{
+  color: var(--sfs-mint);
+}
 
 .lead{
   margin: 0 0 22px;
@@ -223,4 +226,37 @@
   .right{ justify-content: center; }
   .mockWrap{ width: min(420px, 95%); }
   .section{ padding: 84px 0 70px; }
+}
+@media (max-width: 620px) {
+
+  /* reduce section height */
+  .section{
+    padding: 48px 0 30px;
+  }
+
+  /* title smaller */
+  .h1{
+    font-size: 32px;
+  }
+
+  /* reduce grid gap */
+  .grid{
+    gap: 22px;
+  }
+
+  /* smaller mockup image */
+  .mockWrap{
+    width: min(260px, 85%);
+  }
+
+  /* reduce card padding */
+  .glassCard{
+    padding: 18px;
+  }
+
+  /* slightly smaller text */
+  .lead{
+    font-size: 14px;
+  }
+
 }

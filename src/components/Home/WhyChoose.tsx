@@ -79,7 +79,7 @@ export default function WhyChoose() {
         </div>
 
         <div className={styles.ctaWrap}>
-          <Link href="/live-account" className={styles.ctaBtn}>
+          <Link href="https://stonefortsecurities.com/registration/" className={styles.ctaBtn}>
             Open an Account
           </Link>
         

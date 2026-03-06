@@ -84,7 +84,7 @@ export default function BeginnerTradersSection() {
         </div>
 
         <div className={styles.bottomCta}>
-          <a className={styles.primaryBtn} href="/open-account">
+          <a className={styles.primaryBtn} href="https://stonefortsecurities.com/registration/">
             Open an Account
           </a>
         </div>

@@ -16,10 +16,10 @@ export default function PlatformHero() {
           </p>
 
           <div className={styles.ctaRow}>
-            <a className={styles.primary} href="/accounts">
+            <a className={styles.primary} href="https://stonefortsecurities.com/registration/">
               Open Account
             </a>
-            <a className={styles.secondary} href="/accounts/demo">
+            <a className={styles.secondary} href="https://sfs-muportal.com/#/login">
               Try Free Demo
             </a>
           </div>

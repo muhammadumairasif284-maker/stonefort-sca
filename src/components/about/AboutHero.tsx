@@ -19,7 +19,7 @@ export default function AboutHero() {
 
       <div className={styles.container}>
         <div className={styles.left}>
-          <h1 className={styles.title}>About Stonefort</h1>
+          <h1 className={styles.title}>About <span>Stonefort</span></h1>
 
           <p className={styles.lead}>
             Stonefort Securities connects traders in the UAE and globally to the world’s leading
@@ -47,7 +47,7 @@ export default function AboutHero() {
           </div>
 
           <div className={styles.ctaRow}>
-            <Link className={styles.cta} href="/accounts">
+            <Link className={styles.cta} href="https://stonefortsecurities.com/registration/">
               Open an account
             </Link>
           </div>

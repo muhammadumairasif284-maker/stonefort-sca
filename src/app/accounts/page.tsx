@@ -5,6 +5,7 @@ import AccountTiers from "@/components/accounts/AccountTiers";
 import AccountTypesTier from "@/components/accounts/AccountTypesTier";
 import LiveAccountFeatures from "@/components/accounts/LiveAccountFeatures";
 import ExploreForexAccounts from "@/components/accounts/ExploreForexAccounts";
+import GetStartedCTA from "@/components/contact/GetStartedCTA";
 
 export const metadata = {
   title: "Account Types | Stonefort Securities",
@@ -21,6 +22,8 @@ export default function AccountsPage() {
       <AccountTypesTier />
       <LiveAccountFeatures />
       <ExploreForexAccounts />
+      <GetStartedCTA />
+
     </>
   );
 }

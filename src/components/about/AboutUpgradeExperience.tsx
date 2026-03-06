@@ -27,7 +27,7 @@ export default function AboutUpgradeExperience() {
   return (
     <section className={styles.section} aria-label="Upgrade your trading experience">
       <div className={styles.container}>
-        <h2 className={styles.title}>Upgrade Your Trading and Account Management Experience</h2>
+        <h2 className={styles.title}>Upgrade Your Trading and <span>Account Management </span>Experience</h2>
 
         <div className={styles.grid}>
           {items.map((it) => (

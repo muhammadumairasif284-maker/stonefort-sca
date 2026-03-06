@@ -1,5 +1,5 @@
 .section{
-  padding: 96px 0;
+  padding: 56px 0;
   position: relative;
   overflow: hidden;
 }
@@ -196,6 +196,11 @@
   }
   .title{
     font-size: 26px;
+  }
+}
+@media (max-width: 620) {
+    .section {
+    padding: 34px 0 22px;
   }
 }
 

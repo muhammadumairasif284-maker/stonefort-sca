@@ -5,7 +5,7 @@ export default function AboutMissionVision() {
   return (
     <section className={styles.section} aria-label="Mission and Vision">
       <div className={styles.container}>
-        <h2 className={styles.heading}>Our Purpose</h2>
+        <h2 className={styles.heading}>Our <span>Purpose</span></h2>
 
         <div className={styles.cards}>
           {/* Mission Card */}

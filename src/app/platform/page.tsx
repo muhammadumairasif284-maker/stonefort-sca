@@ -8,6 +8,7 @@ import AdvancedCharting from "@/components/platform/AdvancedCharting";
 
 import MT5Spotlight from "@/components/platform/MT5Spotlight";
 import PlatformFaq from "@/components/platform/platformFaq";
+import GetStartedCTA from "@/components/contact/GetStartedCTA";
 
 export default function PlatformPage() {
   return (
@@ -22,6 +23,7 @@ export default function PlatformPage() {
       
       <MT5Spotlight />
       <PlatformFaq />
+      <GetStartedCTA />
     </>
   );
 }

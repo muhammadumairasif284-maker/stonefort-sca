@@ -43,7 +43,7 @@ const TIERS: Tier[] = [
 
 export default function AccountTypesTier() {
   return (
-    <section className={styles.section} aria-label="Account Types">
+    <section  id="account-types-tier" className={styles.section} aria-label="Account Types">
       <div className={styles.bg} aria-hidden="true" />
 
       <div className={styles.container}>

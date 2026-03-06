@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./HeroAccounts.module.css";
 
 export default function HeroAccounts() {
@@ -29,9 +30,20 @@ export default function HeroAccounts() {
           
 
           <div className={styles.ctaRow}>
-            <button className={styles.primaryBtn}>Open Account</button>
-            <button className={styles.secondaryBtn}>Try Free Demo</button>
-          </div>
+          <Link 
+            href="https://stonefortsecurities.com/registration/" 
+            className={styles.primaryBtn}
+          >
+            Open Account
+          </Link>
+
+          <Link 
+            href="https://stonefortsecurities.com/registration/" 
+            className={styles.secondaryBtn}
+          >
+            Try Free Demo
+          </Link>
+        </div>
 
         </div>
 

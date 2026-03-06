@@ -58,7 +58,7 @@ export default function OneAccountSection() {
 
       <div className={styles.ctaWrap}>
         <div className={styles.btnRow}>
-  <a href="/accounts/live" className={`${styles.sfsBtn} ${styles['sfsBtn--primary']}`}>
+  <a href="https://stonefortsecurities.com/registration/" className={`${styles.sfsBtn} ${styles['sfsBtn--primary']}`}>
     Trade Now
   </a>
 </div>

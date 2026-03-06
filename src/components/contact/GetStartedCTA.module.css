@@ -178,4 +178,7 @@
   .section{
     padding: 30px 16px;
   }
+  .title{
+    font-size: 32px;
+   }
 }

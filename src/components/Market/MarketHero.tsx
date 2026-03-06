@@ -34,7 +34,7 @@ export default function MarketHero() {
             </p>
 
             <div className={styles.ctaRow}>
-              <Link className={styles.primaryBtn} href="/accounts">
+              <Link className={styles.primaryBtn} href="https://stonefortsecurities.com/registration/">
                 Open Account
               </Link>
        

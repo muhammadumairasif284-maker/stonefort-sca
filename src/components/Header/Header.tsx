@@ -191,10 +191,10 @@ export default function Header() {
 
             {/* Right: actions */}
             <div className={styles.actions}>
-              <Link href="/login" className={styles.login}>
+              <Link href="https://sfs-muportal.com/#/login" className={styles.login}>
                 Login
               </Link>
-              <Link href="/live-account" className={styles.live}>
+              <Link href="https://stonefortsecurities.com/registration/" className={styles.live}>
                 Live Account
               </Link>
             </div>

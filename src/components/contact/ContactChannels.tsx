@@ -43,7 +43,7 @@ export default function ContactChannels() {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.headingWrap}>
-          <h2 className={styles.title}>Chat with us</h2>
+          <h2 className={styles.title}>Chat with <span>us</span></h2>
           <p className={styles.subtitle}>
             Connect with the Stonefort customer support team, available 24/7,
             for instant assistance.

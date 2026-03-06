@@ -371,3 +371,16 @@
 
   .brand{ min-width: unset; }
 } 
+@media (max-width: 620px) {
+  .logo{
+
+  max-height: 42px;
+
+}
+.containerTop{
+
+
+  padding: 12px 0; 
+}
+
+}

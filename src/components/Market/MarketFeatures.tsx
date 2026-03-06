@@ -21,19 +21,19 @@ const FEATURES: Feature[] = [
     icon: "/images/market/Metalsilver.webp",
     title: "Metals",
     desc: "Trade key metals with flexible sizing and transparent pricing.",
-    chips: ["XAU/USD", "XAG/USD", "Platinum"],
+    chips: ["XAU/USD", "XAG/USD"],
   },
   {
     icon: "/images/market/market-indices.webp",
     title: "Indices",
     desc: "Access global indices to express macro views efficiently.",
-    chips: ["US100", "SPX500", "GER40"],
+    chips: ["Nasdaq-100", "S&P 500", "DAX 40"],
   },
   {
     icon: "/images/market/marketcommodities.webp",
     title: "Commodities",
     desc: "Energy and soft commodities with dynamic market opportunities.",
-    chips: ["WTI", "Brent", "Natural Gas"],
+    chips: ["WTI", "Brent Crude Oil", "Natural Gas"],
   },
   {
     icon: "/images/market/marketcryptocfd-1.webp",
@@ -110,12 +110,12 @@ export default function MarketFeatures() {
                 </div>
               </div>
 
-              <div className={styles.cardFoot}>
+              {/* <div className={styles.cardFoot}>
                 <span className={styles.hint}>View instruments</span>
                 <span className={styles.arrow} aria-hidden="true">
                   →
                 </span>
-              </div>
+              </div> */}
             </article>
           ))}
         </div>

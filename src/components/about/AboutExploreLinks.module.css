@@ -409,8 +409,11 @@
 }
 
 @media (max-width: 520px){
+  .section {
+    padding: 34px 0 22px;
+  }
   .list{
-    grid-template-columns: 54px 1fr;
+    grid-template-columns: 5px 1fr;
   }
 
   .dotWrap{
@@ -425,6 +428,9 @@
   .h2{
     font-size: 32px;
   }
+  .head{
+     margin: 0 auto 20px;
+}
 }
 
 /* ===== ANIMATIONS ===== */

@@ -14,7 +14,7 @@ export default function CFDMarketsPro() {
 
         <MarketBoard />
 
-        <a className={styles.browse} href="/market">
+        <a className={styles.browse} href="/Market">
           Browse all markets →
         </a>
                 <p className={styles.disclaimer}>

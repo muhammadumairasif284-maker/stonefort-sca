@@ -36,10 +36,10 @@ export default function ExploreForexAccounts() {
             </p>
 
             <div className={styles.actions}>
-              <Link className={styles.primary} href="/accounts/live">
+              <Link className={styles.primary} href="https://stonefortsecurities.com/registration/">
                 Open Live Account
               </Link>
-              <Link className={styles.secondary} href="/accounts">
+              <Link className={styles.secondary} href="#account-types-tier">
                 View Account Types
               </Link>
             </div>
@@ -80,9 +80,9 @@ export default function ExploreForexAccounts() {
               </div>
 
               <div className={styles.stepsFooter}>
-                <Link className={styles.cta} href="/accounts/open-account">
+                {/* <Link className={styles.cta} href="/accounts/open-account">
                   Start Now
-                </Link>
+                </Link> */}
                 <span className={styles.note}>
                   Regulated environment • Risk warning applies
                 </span>

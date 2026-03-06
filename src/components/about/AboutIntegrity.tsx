@@ -8,7 +8,7 @@ export default function AboutIntegritySection() {
       <div className={styles.container}>
         <div className={styles.left}>
           <h2 className={styles.title}>
-            Driven by Integrity Guided by Responsibility Powered by Innovation
+            Driven by <span>Integrity</span> Guided by <span>Responsibility</span> Powered by <span>Innovation</span>
           </h2>
 
           <p className={styles.lead}>
@@ -23,10 +23,10 @@ export default function AboutIntegritySection() {
           </p>
 
           <div className={styles.ctaRow}>
-            <Link className={styles.ctaPrimary} href="/accounts">
+            <Link className={styles.ctaPrimary} href="https://stonefortsecurities.com/registration/">
               Open an account
             </Link>
-            <Link className={styles.ctaGhost} href="/login">
+            <Link className={styles.ctaGhost} href="https://sfs-muportal.com/#/login">
               Login
             </Link>
           </div>

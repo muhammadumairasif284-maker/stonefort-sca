@@ -19,10 +19,10 @@ export default function HomeHero() {
           </p>
 
           <div className={styles.ctaRow}>
-            <Link href="/live-account" className={styles.primaryBtn}>
+            <Link href="https://stonefortsecurities.com/registration/" className={styles.primaryBtn}>
               Open Account
             </Link>
-            <Link href="/demo" className={styles.secondaryBtn}>
+            <Link href="https://stonefortsecurities.com/registration/" className={styles.secondaryBtn}>
               Try Free Demo
             </Link>
           </div>

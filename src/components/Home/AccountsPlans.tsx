@@ -92,7 +92,7 @@ export default function AccountsPlans() {
                 <a className={styles.btnPrimary} href="/accounts">
                   View Details
                 </a>
-                <a className={styles.btnGhost} href="/signup">
+                <a className={styles.btnGhost} href="https://stonefortsecurities.com/registration/">
                   Open Account
                 </a>
               </div>

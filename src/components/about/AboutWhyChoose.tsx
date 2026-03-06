@@ -4,7 +4,7 @@ export default function AboutWhyChoose() {
   return (
     <section className={styles.section} aria-label="Why Choose Stonefort">
       <div className={styles.container}>
-        <h2 className={styles.title}>Why Choose Stonefort?</h2>
+        <h2 className={styles.title}>Why <span>Choose Stonefort</span>?</h2>
 
         <p className={styles.lead}>
             Traders choose Stonefort for our commitment to regulatory integrity, transparency and consistent service excellence. We provide access to global financial markets through advanced platforms, strong liquidity and reliable execution.
