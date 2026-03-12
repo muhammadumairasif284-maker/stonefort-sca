@@ -55,7 +55,7 @@ export default function AdvancedCharting() {
 
           <div className={styles.visual}>
             <Image
-              src="/images/platform/freetoolsmockup.webp"
+              src="/images/platform/freetools.webp"
               alt="Trading tools interface"
               width={1400}
               height={700}

@@ -5,11 +5,19 @@ import Link from "next/link";
 import { useState } from "react";
 import styles from "./StonefortAccount.module.css";
 
+/**
+ * 3-step version (content preserved from your 4 steps)
+ * - Step 1 = Register + Answer (same text, merged)
+ * - Step 2 = Verify (same text)
+ * - Step 3 = Fund (same text)
+ */
 const STEPS = [
   {
     num: "1",
     title: "Register",
-    text: "Sign up with your email and instantly access a free demo account.",
+    text:
+      "Sign up with your email and instantly access a free demo account." ,
+      
     total: 3,
   },
   {
@@ -26,12 +34,13 @@ const STEPS = [
   },
 ];
 
-export default function StonefortAccount() {
+export default function stonefortaccount() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
     <section className={styles.section} aria-label="Ready to trade smarter">
       <div className={styles.container}>
+        {/* TOP ROW */}
         <div className={styles.top}>
           <div className={styles.media} data-aos="fade-up">
             <div className={styles.mediaGlow} aria-hidden="true" />
@@ -69,6 +78,7 @@ export default function StonefortAccount() {
           </div>
         </div>
 
+        {/* BOTTOM STEPPER */}
         <div className={styles.stepper} aria-label="Onboarding steps">
           <div className={styles.rail} aria-hidden="true">
             <span className={styles.railGlow} />
@@ -77,6 +87,7 @@ export default function StonefortAccount() {
 
           <div className={styles.stepsGrid}>
             {STEPS.map((s, i) => {
+              // With 3 cards: 1 & 3 top, 2 bottom (keeps your zig-zag feel)
               const isTop = i !== 1;
               const isActive = active === i;
 
@@ -87,13 +98,12 @@ export default function StonefortAccount() {
                   data-aos="fade-up"
                   data-aos-delay={i * 90}
                 >
-                  <div
-                    className={`${styles.node} ${isActive ? styles.nodeHot : ""}`}
-                    aria-hidden="true"
-                  >
+                  {/* node on the rail */}
+                  <div className={`${styles.node} ${isActive ? styles.nodeHot : ""}`} aria-hidden="true">
                     <span className={styles.nodeGlow} />
                   </div>
 
+                  {/* card */}
                   <article
                     className={`${styles.card} ${isActive ? styles.cardActive : ""}`}
                     data-step={s.num}
@@ -104,14 +114,16 @@ export default function StonefortAccount() {
                       <div className={styles.cardContent}>
                         <h3 className={styles.cardTitle}>{s.title}</h3>
 
+                        {/* preserve your merged text newlines */}
                         <p className={styles.cardDesc} style={{ whiteSpace: "pre-line" }}>
                           {s.text}
                         </p>
 
                         <div className={styles.cardFoot}>
-                          <span className={styles.hint}>
-                            Step {s.num} of {s.total}
-                          </span>
+                          <span className={styles.hint}>Step {s.num} of {s.total}</span>
+                          {/* <span className={styles.arrow} aria-hidden="true">
+                            →
+                          </span> */}
                         </div>
                       </div>
                     </div>

@@ -4,15 +4,26 @@
   overflow: hidden;
 }
 
+
 /* soft premium glow */
 .section::before{
   content:"";
   position:absolute;
-  width: 520px;
-  height: 520px;
-  left: -210px;
-  top: -70px;
-  background: radial-gradient(closest-side, rgba(135,171,147,.22), transparent 70%);
+
+  width:420px;
+  height:420px;
+
+  right:80px;
+  top:70px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(183,230,198,.85) 0%,
+      rgba(183,230,198,.20) 40%,
+      transparent 75%
+    );
+
   filter: blur(18px);
   pointer-events:none;
 }

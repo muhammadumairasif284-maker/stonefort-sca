@@ -44,15 +44,24 @@
   gap: 24px;
 }
 
-/* Card System (Global Spec Style) */
+
 .card{
-  padding: 28px 24px;
-  border-radius: 18px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
 
-  background: rgba(255,255,255,.02);
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.03) 0%,
+    rgba(255,255,255,.018) 100%
+  );
   border: 1px solid rgba(135,171,147,.15);
-  box-shadow: 0 18px 60px rgba(0,0,0,.45);
+  border-radius: 18px;
+  box-shadow:
+    0 18px 60px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(255,255,255,.03);
 
+  padding: 28px 24px;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -67,12 +76,95 @@
     background .3s ease;
 }
 
+/* top soft mint glow */
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  pointer-events:none;
+  z-index:0;
+
+  background:
+    radial-gradient(
+      220px 120px at 12% 10%,
+      rgba(183,230,198,.14),
+      transparent 65%
+    ),
+    radial-gradient(
+      180px 100px at 88% 0%,
+      rgba(183,230,198,.08),
+      transparent 70%
+    );
+
+  opacity:.95;
+}
+.card::after{
+  content:"";
+  position:absolute;
+  left:-6%;
+  right:-6%;
+  bottom:-4px;
+  height:64px;
+  pointer-events:none;
+  z-index:0;
+
+  background:
+    /* continuous base line */
+    linear-gradient(
+      to right,
+      rgba(183,230,198,0) 0%,
+      rgba(183,230,198,.55) 8%,
+      rgba(183,230,198,.78) 18%,
+      rgba(183,230,198,.92) 32%,
+      rgba(183,230,198,.82) 50%,
+      rgba(183,230,198,.92) 68%,
+      rgba(183,230,198,.76) 82%,
+      rgba(183,230,198,.50) 92%,
+      rgba(183,230,198,0) 100%
+    )
+    0 78% / 100% 2px no-repeat,
+
+    /* wave bumps */
+    radial-gradient(58px 16px at 6% 78%, rgba(183,230,198,.58) 0%, rgba(183,230,198,.36) 46%, transparent 72%),
+    radial-gradient(68px 18px at 14% 70%, rgba(183,230,198,.72) 0%, rgba(183,230,198,.42) 46%, transparent 74%), 
+    radial-gradient(72px 20px at 22% 64%, rgba(183,230,198,.82) 0%, rgba(183,230,198,.50) 46%, transparent 74%),
+    radial-gradient(80px 20px at 32% 72%, rgba(183,230,198,.70) 0%, rgba(183,230,198,.42) 46%, transparent 74%), 
+    radial-gradient(86px 22px at 44% 76%, rgba(183,230,198,.74) 0%, rgba(183,230,198,.42) 46%, transparent 74%),
+    radial-gradient(92px 24px at 56% 60%, rgba(183,230,198,.94) 0%, rgba(183,230,198,.56) 46%, transparent 74%),
+    radial-gradient(86px 22px at 70% 74%, rgba(183,230,198,.82) 0%, rgba(183,230,198,.48) 46%, transparent 74%),
+    radial-gradient(70px 18px at 82% 68%, rgba(183,230,198,.68) 0%, rgba(183,230,198,.38) 46%, transparent 74%),
+    radial-gradient(62px 16px at 94% 78%, rgba(183,230,198,.60) 0%, rgba(183,230,198,.36) 46%, transparent 72%);
+
+  filter: blur(6px);
+  opacity:.96;
+  transform: translateY(0);
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+/* keep content above effects */
+.card > *{
+  position: relative;
+  z-index: 1;
+}
+
 .card:hover{
   transform: translateY(-4px);
-  border-color: var(--sfs-green-main);
+  border-color: rgba(183,230,198,.45);
+  background: linear-gradient(
+    180deg,
+    rgba(183,230,198,.08) 0%,
+    rgba(255,255,255,.025) 100%
+  );
   box-shadow:
     0 22px 70px rgba(77,110,85,.30),
-    0 0 0 1px rgba(77,110,85,.25);
+    0 0 0 1px rgba(183,230,198,.16),
+    0 0 40px rgba(183,230,198,.08);
+}
+
+.card:hover::after{
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
 /* Icon Block (Stonefort System — NOT circular bubble) */

@@ -11,7 +11,7 @@
 .section{
   background: var(--background);
   color: var(--foreground);
-  padding: 6px 16px 40px;
+  padding: 56px 16px ;
   position: relative;
   overflow: hidden;
 }

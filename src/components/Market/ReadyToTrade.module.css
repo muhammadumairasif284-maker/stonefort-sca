@@ -230,6 +230,8 @@
   z-index: 0;
   pointer-events: none;
   transition: color .25s ease, text-shadow .25s ease;
+
+  
 }
 
 /* Subtle inner glow */

@@ -19,16 +19,7 @@
 }
 
 /* soft center glow */
-.section::before {
-  content: "";
-  position: absolute;
-  inset: -200px;
-  background:
-    radial-gradient(600px 300px at 50% 50%, rgba(77,110,85,.35), transparent 70%),
-    radial-gradient(600px 300px at 50% 70%, rgba(135,171,147,.15), transparent 70%);
-  filter: blur(80px);
-  pointer-events: none;
-}
+
 
 .inner {
   width: min(1180px, calc(100% - 32px));
@@ -214,7 +205,7 @@
   text-align: center;
   margin-top: 90px;
   padding: 60px 40px;
-  border-radius: 22px;
+  /* border-radius: 22px; */
   background: #fff;
   border: 1px solid rgba(135,171,147,.25);
 }

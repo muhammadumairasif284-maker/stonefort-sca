@@ -1,6 +1,9 @@
 /* components/platform/MT5Spotlight/MT5Spotlight.module.css
-   Balanced layout version
-   Heading centered on top
+   UPDATED to Stonefort Master Style Spec
+   - DO NOT touch :root
+   - Card title = 16px
+   - Card desc  = 16px
+   - Button font = 16px
 */
 
 .section{
@@ -16,6 +19,7 @@
   }
 }
 
+
 .section::before{
   content:"";
   position:absolute;
@@ -24,152 +28,135 @@
 
   background:
     radial-gradient(
-      900px 520px at 20% 55%,
+      900px 520px at 20% 55%,     /* LEFT + CENTER */
       rgba(135,171,147,.22),
       transparent 65%
     ),
     radial-gradient(
-      700px 400px at 55% 60%,
+      700px 400px at 55% 60%,     /* CENTER soft glow */
       rgba(77,110,85,.18),
       transparent 70%
     );
 }
 
-/* ---------------------- */
-/* HEADER (CENTERED TOP) */
-/* ---------------------- */
-
-.header{
-  text-align:center;
-  max-width:760px;
-  margin:0 auto 46px;
-  position:relative;
-  z-index:2;
-}
-
-.kicker{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  font-size:12px;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:var(--sfs-mint);
-  margin-bottom:10px;
-  font-weight:700;
-}
-
-.title{
-  margin:14px 0 10px;
-  color:rgba(255,255,255,.92);
-  font-weight:500;
-  font-size:48px;
-  line-height:1.1;
-  letter-spacing:.02em;
-
-  font-family:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
-
-  text-shadow:0 18px 60px rgba(0,0,0,.55);
-}
-
-.title span{
-  color:var(--sfs-mint);
-}
-
-.desc{
-  margin:0;
-  font-size:var(--section-sub-size);
-  line-height:1.7;
-  color:rgba(234,240,242,.78);
-}
-
-/* ---------------------- */
-/* GRID LAYOUT */
-/* ---------------------- */
-
 .inner{
-  width:min(1180px, calc(100% - 32px));
-  margin:0 auto;
-
-  display:grid;
-  grid-template-columns:1.15fr 0.85fr;
-
-  gap:48px;
-  align-items:center;
-
-  position:relative;
-  z-index:1;
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
+  gap: 46px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
-/* ---------------------- */
 /* LEFT VISUAL */
-/* ---------------------- */
-
 .visual{
-  position:relative;
+  position: relative;
 }
 
 .visualFrame{
-  border-radius:26px;
-  overflow:hidden;
-  background:rgba(255,255,255,.03);
-  border:1px solid rgba(135,171,147,.18);
-
+  border-radius: 26px;
+  overflow: hidden;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(135,171,147,.18);
   box-shadow:
     0 24px 70px rgba(0,0,0,.45),
     0 0 0 1px rgba(77,110,85,.12) inset;
 }
 
 .visualImg{
-  width:100%;
-  height:auto;
-  display:block;
-  transform:scale(1.04);
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1.02);
 }
 
 .visualGlow{
   position:absolute;
   inset:-40px;
-
   background:
-    radial-gradient(
-      520px 340px at 55% 45%,
-      rgba(77,110,85,.35),
-      transparent 68%
-    );
-
-  filter:blur(45px);
+    radial-gradient(520px 340px at 55% 45%, rgba(77,110,85,.35), transparent 68%);
+  filter: blur(45px);
   pointer-events:none;
   z-index:-1;
 }
 
-/* ---------------------- */
-/* FEATURE LIST */
-/* ---------------------- */
-
-.list{
-  position:relative;
-  display:grid;
-  gap:18px;
-  padding-left:10px;
+/* RIGHT CONTENT */
+.content{
+  position: relative;
 }
 
-/* ROW */
+.kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  font-size: 12px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--sfs-mint);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
 
+.title{
+ margin: 14px 0 10px;
+  color: rgba(255,255,255,.92);
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 1.05;
+  letter-spacing: .02em;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+  text-shadow: 0 18px 60px rgba(0,0,0,.55);
+}
+.title span{
+  color: var(--sfs-mint);
+}
+.desc{
+  margin: 0 0 26px;
+  font-size: var(--section-sub-size);
+  line-height: 1.7;
+  color: rgba(234,240,242,.78);
+  max-width: 520px;
+}
+
+/* UNIQUE LIST STYLE: numbered rows + vertical rail */
+.list{
+  position: relative;
+  display: grid;
+  gap: 18px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+.rail{
+  position:absolute;
+  left: 24px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgba(135,171,147,.10),
+    rgba(77,110,85,.45),
+    rgba(135,171,147,.10)
+  );
+  opacity: .9;
+}
+
+/* Row behaves like Master card */
 .row{
-  display:grid;
-  grid-template-columns:60px 1fr;
-  gap:14px;
-  align-items:start;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 14px 14px 14px 6px;
+  border-radius: 16px;
 
-  padding:14px 14px 14px 6px;
-  border-radius:16px;
-
-  background:rgba(255,255,255,.02);
-  border:1px solid rgba(135,171,147,.12);
-
-  box-shadow:0 18px 60px rgba(0,0,0,.30);
-  backdrop-filter:blur(10px);
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(135,171,147,.12);
+  box-shadow: 0 18px 60px rgba(0,0,0,.30);
+  backdrop-filter: blur(10px);
 
   transition:
     transform .4s cubic-bezier(.22,.61,.36,1),
@@ -179,68 +166,54 @@
 }
 
 .row:hover{
-  transform:translateY(-4px);
-
-  border-color:var(--sfs-green-main);
-
+  transform: translateY(-4px);
+  border-color: var(--sfs-green-main);
   box-shadow:
     0 22px 70px rgba(77,110,85,.22),
     0 0 0 1px rgba(77,110,85,.18);
 }
 
-/* NUMBER */
-
+/* Number badge */
 .num{
-  width:46px;
-  height:46px;
-
-  border-radius:14px;
-
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
   display:flex;
   align-items:center;
   justify-content:center;
-
-  font-weight:900;
-  font-size:16px;
-  color:#fff;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(77,110,85,.35),
-      rgba(16,23,17,.15)
-    );
-
-  border:1px solid rgba(135,171,147,.22);
-
-  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  font-weight: 900;
+  font-size: 16px;
+  color: #ffffff;
+  background: linear-gradient(180deg, rgba(77,110,85,.35), rgba(16,23,17,.15));
+  border: 1px solid rgba(135,171,147,.22);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
 }
 
-/* TEXT */
-
+/*  RULE: Card title always 16px */
 .text h3{
-  margin:2px 0 6px;
-  font-size:16px;
-  line-height:1.25;
-  color:var(--foreground);
-  font-weight:900;
+  margin: 2px 0 6px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--foreground);
+  font-weight: 900;
 }
 
+/*  RULE: Card desc always 16px */
 .text p{
-  margin:0;
-  font-size:16px;
-  line-height:1.65;
-  color:rgba(234,240,242,.75);
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: rgba(234,240,242,.75);
 }
 
-/* ---------------------- */
 /* CTA */
-/* ---------------------- */
-
 .ctaRow{
-  margin-top:22px;
+  margin-top: 22px;
 }
 
+/*  RULE: Button font always 16px
+   Kept Master Primary button vibe (white -> glass hover)
+*/
 .cta{
   display:inline-flex;
   align-items:center;
@@ -248,19 +221,16 @@
   gap:10px;
 
   min-height:46px;
-  padding:0 22px;
-
-  border-radius:14px;
+  padding: 0 22px;
+  border-radius: 14px;
 
   text-decoration:none;
-  font-size:16px;
-  font-weight:600;
+  font-size: 16px;
+  font-weight: 600;
 
   background:#fff;
   color:#101711;
-
   border:1px solid rgba(135,171,147,.30);
-
   box-shadow:0 16px 45px rgba(0,0,0,.18);
 
   transition:
@@ -272,49 +242,24 @@
 }
 
 .cta:hover{
-  transform:translateY(-2px);
-
-  background:rgba(77,110,85,.30);
-  border-color:rgba(135,171,147,.45);
+  transform: translateY(-2px);
+  background: rgba(77,110,85,.30);
+  border-color: rgba(135,171,147,.45);
   color:#fff;
-
   box-shadow:0 18px 55px rgba(77,110,85,.35);
 }
 
-/* ---------------------- */
 /* RESPONSIVE */
-/* ---------------------- */
-
-@media (max-width:980px){
-
+@media (max-width: 980px){
   .inner{
-    grid-template-columns:1fr;
-    gap:28px;
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
-
-  .visual{
-    order:1;
-  }
-
-  .list{
-    order:2;
-  }
-
 }
 
-@media (max-width:520px){
-
-  .title{
-    font-size:32px;
-  }
-
-  .row{
-    grid-template-columns:52px 1fr;
-  }
-
-  .num{
-    width:42px;
-    height:42px;
-  }
-
+@media (max-width: 520px){
+  .row{ grid-template-columns: 52px 1fr; }
+  .num{ width: 42px; height: 42px; }
+  .title{ font-size: 32px;}
+  .h3 {font-size: 32px;}
 }

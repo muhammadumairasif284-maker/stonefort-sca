@@ -3,7 +3,7 @@
 ========================================================= */
 
 .section{
-  padding: 30px 16px;
+  padding: 30px 16px 90px;
   background: var(--background);
   position: relative;
   overflow: hidden;
