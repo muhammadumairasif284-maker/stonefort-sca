@@ -125,6 +125,7 @@ export default function Footer() {
           {/* RIGHT */}
           <div className={styles.rightCol}>
             <div className={styles.appBlock}>
+              <h3 className={styles.appTitle}>StonefortTrader</h3>
               <div className={styles.phoneWrap}>
                 <Image
                   src="/images/platform/stonefortraderf.webp"

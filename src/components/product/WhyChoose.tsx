@@ -17,10 +17,7 @@ const cards = [
     title: "Secure Digital Environment",
     desc: "Client information is protected through globally recognized information security frameworks, supported by strict operational protocols designed to safeguard confidentiality, preserve data integrity, and maintain the highest standards of digital security.",
   },
-  {
-    title: "UAE Regulatory Presence",
-    desc: "Operations are conducted within the United Arab Emirates under a locally issued financial services license, ensuring that all services, procedures, and market activities remain aligned with applicable financial regulations and compliance obligations.",
-  },
+
   {
     title: "Dedicated Support",
     desc: "Dedicated client support is available 24 hours a day, 365 days a year through phone, email, and WhatsApp, providing continuous assistance for trading platforms, account-related matters, and general service enquiries.",

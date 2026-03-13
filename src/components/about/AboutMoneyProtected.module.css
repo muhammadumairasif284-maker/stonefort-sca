@@ -167,6 +167,14 @@
   font-size: 18px;
   font-weight: 850;
   line-height: 1.2;
+  
+}
+
+.includeArrow{
+  margin:0 6px;
+  color:#cfd6dc; /* silver */
+  font-size:16px;
+  font-weight:600;
 }
 
 .p{

@@ -283,15 +283,11 @@
 }
 
 @media (min-width: 981px){
- 
-  .grid > .card:nth-child(-n+3){
-    grid-column: span 2; 
+
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
   }
 
-
-  .grid > .card:nth-child(n+4){
-    grid-column: span 3; /* 3+3 = 6 */
-  }
 }
 
 /* Responsive */

@@ -1,6 +1,7 @@
 
 
 import AboutHero from "@/components/about/AboutHero";
+import { TrustedPlatforms } from "@/components/product";
 import AboutWhyChoose from "@/components/about/AboutWhyChoose";
 import AboutIntegrity from "@/components/about/AboutIntegrity";
 import AboutMissionVision from "@/components/about/AboutMissionVision";
@@ -21,6 +22,7 @@ export default function AboutPage() {
   return (
     <>
       <AboutHero />
+            <TrustedPlatforms />
       <AboutWhyChoose />
       <AboutIntegrity />
       <AboutMissionVision />

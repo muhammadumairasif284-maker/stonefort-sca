@@ -4,11 +4,11 @@ import Image from "next/image";
 const items = [
   {
     title: "Instant Withdrawals",
-    desc: "Access your funds quickly and securely through our group’s regulated platforms",
+    desc: "Access your funds quickly and securely, processed within 24 hours through our group’s regulated platforms.",
   },
   {
     title: "No Transaction Fees",
-    desc: "Deposit and withdraw with zero fees and no hidden charges through our regulated entities",
+    desc: "Deposit with zero fees, and enjoy minimalist, hassle-free withdrawals through our regulated entities, no hidden charges.",
   },
   {
     title: "Multiple Payment Methods",
@@ -30,10 +30,11 @@ export default function AboutMoneyProtected() {
 
         <h2 className={styles.title}>Your Money is Protected</h2>
 
-        <p className={styles.lead}>
-            All client deposits, withdrawals and payment processing are managed by our regulated
-            group entities. These services include
-        </p>
+<p className={styles.lead}>
+  All client deposits, withdrawals and payment processing are managed by our regulated
+  group entities. These services include
+  <span className={styles.includeArrow}>➜</span> 
+</p>
 
         {/* NEW IMAGE */}
         <div className={styles.shieldWrap}>

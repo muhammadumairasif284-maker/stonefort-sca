@@ -17,7 +17,7 @@ const PLANS: Plan[] = [
     tier: "Starter",
     badge: "Starter",
     startsAt: "$50",
-    leverage: "1:1000",
+    leverage: "1:500",
     spreads: "1.3",
     commission: "0",
     stopOut: "20%",

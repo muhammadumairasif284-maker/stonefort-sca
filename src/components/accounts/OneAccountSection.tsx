@@ -34,12 +34,7 @@ export default function OneAccountSection() {
               </p>
             </div>
 
-            <div className={styles.card}>
-              <h3>Secure, Transparent, Reliable</h3>
-              <p>
-                Your capital is protected with SCA-regulated security protocols, ensuring zero hidden fees or deposit charges.
-              </p>
-            </div>
+
           </div>
         </div>
       </div>

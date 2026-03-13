@@ -20,7 +20,7 @@ type Channel =
 const channels: Channel[] = [
   {
     title: "Media Collaboration",
-    value: "marketing@stonefortsecurities.com",
+    value: "marketing@stonefort.ae",
     icon: "/images/contact/Media-Collaboration.webp",
     type: "email",
   },
