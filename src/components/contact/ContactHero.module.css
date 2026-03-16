@@ -185,7 +185,7 @@
 
 .mockWrap{
   position: relative;
-  width: min(360px, 92%);
+  width: min(360px, 100%);
   aspect-ratio: 3 / 5.6;
 }
 

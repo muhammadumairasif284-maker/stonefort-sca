@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "./Footer.module.css";
 
 const menu = [
-  { href: "/", label: "Home" },
+  { href: "/", label: "Stonefort MENA" },
   { href: "/Market", label: "Market" },
   { href: "/accounts", label: "Accounts" },
   { href: "/platform", label: "Platform" },
@@ -41,9 +41,9 @@ const socials = [
 ];
 
 const legalLinks = [
-  { href: "/legal-documents", label: "Legal Documents" },
-  { href: "/privacy-policy", label: "Privacy Policy" },
-  { href: "/cookies-policy", label: "Cookies Policy" },
+  { href: "/legal/Stonefort Mena Complaint Handling Policy_V1.pdf", label: "Legal Documents" },
+  { href: "/legal/Stonefort Mena Privacy Policy_V1.pdf", label: "Privacy Policy" },
+  { href: "/legal/_Stonefort Mena Cookies Policy_V1.pdf", label: "Cookies Policy" },
 
 ];
 
