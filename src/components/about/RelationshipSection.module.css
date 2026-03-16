@@ -82,12 +82,14 @@
 
 .title{
   margin:0 0 16px;
-  font-size:var(--section-title-size);
-  font-weight:700;
+  font-size:54px;
+  font-weight:600;
   line-height:1.1;
   color:#101711;
 }
-
+.title span {
+   color: var(--sfs-mint) !important;
+}
 .body{
   display:grid;
   gap:14px;

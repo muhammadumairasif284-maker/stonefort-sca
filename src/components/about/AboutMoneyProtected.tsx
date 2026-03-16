@@ -7,8 +7,8 @@ const items = [
     desc: "Access your funds quickly and securely, processed within 24 hours through our group’s regulated platforms.",
   },
   {
-    title: "No Transaction Fees",
-    desc: "Deposit with zero fees, and enjoy minimalist, hassle-free withdrawals through our regulated entities, no hidden charges.",
+    title: "Deposit Free, Withdraw Smart",
+    desc: "Deposit funds with absolutely no fees and experience hassle-free withdrawals with only minimal charges, all fully transparent through our regulated entities. No hidden costs, ever.",
   },
   {
     title: "Multiple Payment Methods",

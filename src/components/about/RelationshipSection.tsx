@@ -15,19 +15,23 @@ export default function RelationshipSection() {
 
             <div className={styles.body}>
               <p className={styles.desc}>
-                Stonefort MENA provides introductions to Stonefort Securities Ltd. Which remains solely responsible for all trading services and account management.
+                <b>Stonefort MENA</b> facilitates introductions to <b>Stonefort Securities Ltd</b>, which is fully responsible for all trading services and account management.
               </p>
 
               <p className={styles.desc}>
-                We do not hold client funds or execute trades. All trading services, account management, and fund custody are provided directly by Stonefort Securities Ltd under its regulatory licenses.
+                Stonefort MENA does not hold client funds or execute trades. All trading, account management, and fund custody are provided directly by Stonefort Securities Ltd under its regulatory licenses.
               </p>
 
               <p className={styles.desc}>
-                Stonefort Securities Ltd also offers insurance coverage of up to USD 1,000,000, providing an extra layer of protection for client funds. Stonefort MENA’s role is to introduce, guide, and support clients in accessing these services while ensuring full compliance with CMA Category 5 regulations.
+                Additionally, Stonefort Securities Ltd offers insurance coverage, providing an extra layer of protection for client funds.
+              </p>
+
+              <p className={styles.desc}>
+               Stonefort MENA’s role is to guide and support clients in accessing these services while ensuring full compliance with CMA Category 5 regulations.
               </p>
 
               <p className={styles.subtext}>
-                For more details regarding Stonefort MENA’s licensed services, please visit the CMA website
+                For more details on Stonefort MENA’s licensed services, please visit the CMA website.
               </p>
             </div>
 

@@ -1,7 +1,8 @@
 
 
 import AboutHero from "@/components/about/AboutHero";
-import { TrustedPlatforms } from "@/components/product";
+import TraderReviews from "@/components/about/TraderReviews";
+// import { TrustedPlatforms } from "@/components/product";
 import AboutWhyChoose from "@/components/about/AboutWhyChoose";
 import AboutIntegrity from "@/components/about/AboutIntegrity";
 import AboutMissionVision from "@/components/about/AboutMissionVision";
@@ -22,7 +23,8 @@ export default function AboutPage() {
   return (
     <>
       <AboutHero />
-      <TrustedPlatforms />
+      <TraderReviews />
+      {/* <TrustedPlatforms /> */}
       <AboutWhyChoose />
       <AboutIntegrity />
       <AboutMissionVision />
